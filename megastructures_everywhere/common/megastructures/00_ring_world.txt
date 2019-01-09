@@ -11,6 +11,7 @@ ring_world_1 = {
 		minerals = 10000
 		influence = 300
 	}
+	construction_blocks_others = no
 
 	maintenance = {
 		energy = 5
@@ -19,7 +20,7 @@ ring_world_1 = {
 	potential = {
 		has_ascension_perk = ap_galactic_wonders
 	}
-	
+
 	possible = {
 		exists = starbase
 		custom_tooltip = {
@@ -45,37 +46,8 @@ ring_world_1 = {
 				}
 			}
 		}
-		custom_tooltip = {
-			fail_text = "requires_no_black_hole"
-			NOT = { is_star_class = sc_black_hole }
-		}
-		custom_tooltip = {
-			fail_text = "requires_no_binary_trinary"
-			NOR = {
-				is_star_class = sc_binary_1
-				is_star_class = sc_binary_2
-				is_star_class = sc_binary_3
-				is_star_class = sc_binary_4
-				is_star_class = sc_binary_5
-				is_star_class = sc_binary_6
-				is_star_class = sc_binary_7
-				is_star_class = sc_binary_8
-				is_star_class = sc_binary_9
-				is_star_class = sc_binary_10
-				is_star_class = sc_trinary_1
-				is_star_class = sc_trinary_2
-				is_star_class = sc_trinary_3
-				is_star_class = sc_trinary_4
-			}
-		}
-
-		custom_tooltip = {
-			fail_text = "requires_no_existing_megastructure"
-			#NOT = { has_any_megastructure = yes }
-			has_no_non_gate_megastructure = yes
-		}
 	}
-	
+
 	placement_rules = {
 		planet_possible = {
 			custom_tooltip = {
@@ -92,26 +64,26 @@ ring_world_1 = {
 			}
 		}
 	}
-	
+
 	ai_weight = {
-		factor = 10		
-		
+		factor = 10
+
 		modifier = {
 			factor = 0.1
 			starbase = { NOT = { has_starbase_size >= starbase_starfortress } }
-		}	
+		}
 
 		modifier = {
 			factor = 0.1
 			any_neighbor_system = {
 				exists = owner
 				NOT = {
-					owner = { is_same_value = from } 
+					owner = { is_same_value = from }
 				}
 			}
-		}	
+		}
 	}
-	
+
 	on_build_start = {}
 	on_build_cancel = {}
 	on_build_complete = {
@@ -127,27 +99,28 @@ ring_world_2_intermediate = {
 	upgrade_from = {
 		ring_world_1
 	}
-	
+
 	build_time = 4800
 	build_cost = {
 		minerals = 20000
 	}
+	construction_blocks_others = no
 
 	possible = {
 		from = { has_ascension_perk = ap_galactic_wonders }
 	}
-	
+
 	on_build_start = {}
 	on_build_cancel = {}
 	on_build_complete = {
-		every_system_planet = { 
+		every_system_planet = {
 			limit = { is_star = no }
-			remove_planet = yes 
+			remove_planet = yes
 		}
 		set_asteroid_belt = {
 			radius = 0
 		}
-		
+
 		remove_megastructure = fromfrom
 		spawn_megastructure = {
 			name = "NAME_Ring_Section_A"
@@ -195,7 +168,7 @@ ring_world_2 = {
 	# used from script only
 	upgrade_desc = hide
 	potential = { always = no }
-	
+
 	upgrade_from = {
 		ring_world_2_intermediate
 	}
@@ -212,6 +185,7 @@ ring_world_3_intermediate = {
 	build_cost = {
 		minerals = 20000
 	}
+	construction_blocks_others = no
 
 	possible = {
 		from = { has_ascension_perk = ap_galactic_wonders }
@@ -345,9 +319,10 @@ ring_world_restored = {
 	build_cost = {
 		minerals = 20000
 	}
+	construction_blocks_others = no
 
 	possible = {
-		from = { 
+		from = {
 			has_technology = tech_mega_engineering
 		}
 		custom_tooltip = {
