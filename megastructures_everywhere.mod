@@ -1,4 +1,4 @@
-name="megastructures_everywhere"
+name="Megastructures Everywhere"
 path="mod/megastructures_everywhere"
 tags={
 	"Economy"

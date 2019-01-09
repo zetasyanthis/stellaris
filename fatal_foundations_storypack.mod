@@ -6,4 +6,4 @@ tags={
 }
 picture="fatalf.png"
 remote_file_id="1426721653"
-supported_version="2.1.*"
+supported_version="2.1.3"
