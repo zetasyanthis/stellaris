@@ -1,0 +1,870 @@
+namespace = gms_abh
+
+#Central Event
+planet_event = {
+	id = gms_abh.144
+	hide_window = yes
+	
+	trigger = {
+		OR = {
+			has_building = "building_portal"
+			has_building = "building_portal_21"
+		}
+	}
+	
+	immediate = {
+		random_list = {
+			#Explosion: Apocalyptic
+			10 = {planet_event = { id = gms_abh.6 }}
+			#Explosion: Planetary
+			20 = {planet_event = { id = gms_abh.7 }}
+			#Explosion: Giant
+			20 = {planet_event = { id = gms_abh.2 }}
+			#Explosion: Normal
+			40 = {planet_event = { id = gms_abh.3 }}
+			#Unrest1
+			100 = {planet_event = { id = gms_abh.4 }}
+			#Unrest1 (for higher property)
+			60 = {
+				IF = {
+					limit = {
+						owner = {
+							has_country_flag = gms_safer_operations
+						}
+					}
+					planet_event = { id = gms_abh.4 }
+				}
+			}
+			
+			#higher property if country doesn´t operate safe
+			
+			#Explosion: Apocalyptic
+			5 = {
+				IF = {
+					limit = {
+						owner = {
+							NOT = {has_country_flag = gms_safer_operations}
+						}
+					}
+					planet_event = { id = gms_abh.6 }
+				}
+			}
+			#Explosion: Planetary
+			10 = {
+				IF = {
+					limit = {
+						owner = {
+							NOT = {has_country_flag = gms_safer_operations}
+						}
+					}
+					planet_event = { id = gms_abh.7 }
+				}
+			}
+			#Explosion: Giant
+			10 = {
+				IF = {
+					limit = {
+						owner = {
+							NOT = {has_country_flag = gms_safer_operations}
+						}
+					}
+					planet_event = { id = gms_abh.2 }
+				}
+			}
+			#Explosion: Normal
+			20 = {
+				IF = {
+					limit = {
+						owner = {
+							NOT = {has_country_flag = gms_safer_operations}
+						}
+					}
+					planet_event = { id = gms_abh.3 }
+				}
+			}
+			
+			#higher property if catastrophe not already occured
+			
+			#Explosion: Apocalyptic
+			5 = {
+				IF = {
+					limit = {
+						owner = {
+							NOT = {has_country_flag = gms_abh_explosion_apocalyptic}
+						}
+					}
+					planet_event = { id = gms_abh.6 }
+				}
+			}
+			#Explosion: Planetary
+			10 = {
+				IF = {
+					limit = {
+						owner = {
+							NOT = {has_country_flag = gms_abh_explosion_planetary}
+						}
+					}
+					planet_event = { id = gms_abh.7 }
+				}
+			}
+			#Explosion: Giant
+			10 = {
+				IF = {
+					limit = {
+						owner = {
+							NOT = {has_country_flag = gms_abh_explosion_giant}
+						}
+					}
+					planet_event = { id = gms_abh.2 }
+				}
+			}
+			#Explosion: Normal
+			20 = {
+				IF = {
+					limit = {
+						owner = {
+							NOT = {has_country_flag = gms_abh_explosion_normal}
+						}
+					}
+					planet_event = { id = gms_abh.3 }
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		years = 25
+		modifier = {
+			factor = 1.5
+			owner = {
+				has_country_flag = gms_safer_operations
+			}
+		}
+	}
+}
+
+#Central event for upgrade
+planet_event = {
+	id = gms_abh.145
+	hide_window = yes
+	
+	trigger = {
+		has_building = "building_portal_2"
+		owner = {
+			NOT = {
+				has_technology = "ig_tech_dark_hole_perfection"
+			}
+		}
+	}
+	
+	immediate = {
+		random_list = {
+			#Explosion: Apocalyptic
+			10 = {planet_event = { id = gms_abh.6 }}
+			#Explosion: Planetary
+			20 = {planet_event = { id = gms_abh.7 }}
+			#Explosion: Giant
+			20 = {planet_event = { id = gms_abh.2 }}
+			#Explosion: Normal
+			50 = {planet_event = { id = gms_abh.3 }}
+			#Unrest1
+			175 = {planet_event = { id = gms_abh.4 }}
+		}
+	}
+	
+	mean_time_to_happen = {
+		years = 35
+		modifier = {
+			factor = 1.5
+			owner = {
+				has_country_flag = gms_safer_operations
+			}
+		}
+	}
+}
+
+#Central event for very dangerous black hole
+planet_event = {
+	id = gms_abh.146
+	hide_window = yes
+	
+	trigger = {
+		has_building = "building_portal_2"
+		owner = {
+			NOT = {
+				has_technology = "ig_tech_dark_hole_perfection"
+			}
+		}
+	}
+	
+	immediate = {
+		random_list = {
+			#Explosion: Apocalyptic
+			20 = {planet_event = { id = gms_abh.6 }}
+			#Explosion: Planetary
+			20 = {planet_event = { id = gms_abh.7 }}
+			#Explosion: Giant
+			20 = {planet_event = { id = gms_abh.2 }}
+			#Explosion: Normal
+			60 = {planet_event = { id = gms_abh.3 }}
+			#Unrest1
+			45 = {planet_event = { id = gms_abh.4 }}
+		}
+	}
+	
+	mean_time_to_happen = {
+		years = 30
+		modifier = {
+			factor = 1.333
+			owner = {
+				has_country_flag = gms_safer_operations
+			}
+		}
+	}
+}
+
+
+#on_building_complete #Done
+#this = planet
+#from = tile
+planet_event = {
+	id = gms_abh.1						#for on actions
+	desc = "gms_abh_1_desc"				#for localisation, desc can be specified to distinguish between ethics or other triggers
+	picture = GFX_evt_physics_research
+	title = "gms_abh_1"					#for localisation
+	show_sound = event_construction		#plays the sound when the event occurs
+	location = from
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = {
+			OR = {
+				has_building = "building_portal"
+			}
+		}
+		owner = {
+			not = {
+				has_country_flag = gms_country_black_hole_created
+			}
+		}
+	}
+	
+	option = {
+		name = gms_abh_1.option_1
+		hidden_effect = {
+			owner = {set_country_flag = gms_black_hole_created}
+		}
+	}
+	
+	#immediate = {}
+	
+	#option = {name, response_text, hidden_effect, trigger}		Choose between these options when the event appears
+	
+	#mean_time_to_happen = {days = 1}	#modifiers possible
+}
+
+#Catastrophic Explosion #Done
+planet_event = {
+	id = gms_abh.2
+	title = "gms_abh_2"
+	desc = "gms_abh_2_desc"
+	picture = GFX_evt_physics_research
+	show_sound = event_super_explosion
+	
+	trigger = {
+		OR = {
+			has_building = "building_portal"
+			has_building = "building_portal_2"
+			has_building = "building_portal_21"
+			has_building = "building_portal_31"
+		}
+	}
+	
+	option = {
+		name = gms_abh_2.option_1
+		trigger = {
+			owner = {
+				NOR = {
+					has_ethic = ethic_materialist
+					has_ethic = ethic_fanatic_materialist
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = gms_abh_2.option_2
+		trigger = {
+			owner = {
+				OR = {
+					has_ethic = ethic_materialist
+					has_ethic = ethic_fanatic_materialist
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = gms_abh_operate_safer
+		trigger = {
+			owner = {
+				AND = {
+					has_country_flag = gms_black_hole_explosion
+					NOT = {has_country_flag = gms_safer_operations}
+				}
+				
+			}
+		}
+		hidden_effect = {
+			owner = { set_country_flag = gms_safer_operations }
+		}
+		owner = {add_research_option = ig_tech_dark_hole_stabilization}
+	}
+	
+	immediate = {
+		owner = {
+			set_country_flag = gms_black_hole_explosion
+			set_country_flag = gms_abh_explosion_giant
+		}
+		random_list = {
+			80 = {
+				every_tile = {
+					if = {
+						limit = {
+							OR = {
+								has_building = "building_portal"
+								has_building = "building_portal_2"
+								has_building = "building_portal_21"
+								has_building = "building_portal_31"
+							}
+						}
+						set_blocker = "tb_crater"
+					}
+					else_if = {
+						limit = {
+							has_building = yes
+						}
+						set_blocker = "tb_city_ruins"
+					}	
+					else = {
+						set_blocker = "tb_radioactive_wasteland"
+					}
+				}
+					#Make it possible it colonize by removing one random tileblocker
+				random_tile = {
+					remove_blocker = yes
+				}
+			}
+			20 = {
+				every_tile = {
+					if = {
+						limit = {
+							OR = {
+								has_building = "building_portal"
+								has_building = "building_portal_2"
+								has_building = "building_portal_21"
+								has_building = "building_portal_31"
+							}
+						}
+						set_blocker = "tb_crater"
+					}
+					else_if = {
+						limit = {
+							has_building = yes
+						}
+						set_blocker = "tb_city_ruins"
+						else = {
+							set_blocker = "tb_radioactive_wasteland"
+					}
+					}
+				}
+				random_tile = {
+					remove_blocker = yes
+				}
+				if = {
+					limit = {
+						NOR = {is_planet_class = pc_habitat is_planet_class = pc_ringworld}
+					}
+					change_pc = pc_nuked
+				}
+			}
+		}
+	}
+	
+	is_triggered_only = yes
+}
+
+#Normal Explosion #Done
+planet_event = {
+	id = gms_abh.3
+	title = "gms_abh_3"
+	desc = "gms_abh_3_desc"
+	picture = GFX_evt_nuclear_explosion
+	show_sound = event_ship_explosion
+	
+	trigger = {
+		OR = {
+			has_building = "building_portal"
+			has_building = "building_portal_2"
+			has_building = "building_portal_21"
+			has_building = "building_portal_31"
+		}
+	}
+	
+	option = {
+		name = gms_abh_3.option_1
+	}
+	
+	option = {
+		name = gms_abh_operate_safer
+		trigger = {
+			owner = {
+				AND = {
+				has_country_flag = gms_black_hole_explosion
+				NOT = {has_country_flag = gms_safer_operations}
+				}
+			}
+		}
+		hidden_effect = {
+			owner = { set_country_flag = gms_safer_operations }
+		}
+		owner = {add_research_option = ig_tech_dark_hole_stabilization}
+	}
+	
+	immediate = {
+		owner = {
+			set_country_flag = gms_black_hole_explosion
+			set_country_flag = gms_abh_explosion_normal
+		}
+		every_tile = {
+			if = {
+				limit = {
+					any_neighboring_tile = {
+						OR = {
+			has_building = "building_portal"
+			has_building = "building_portal_2"
+			has_building = "building_portal_21"
+			has_building = "building_portal_31"
+		}
+					}
+				}
+				set_blocker = "tb_radioactive_wasteland"
+			}
+			if = {
+				limit = {
+					OR = {
+			has_building = "building_portal"
+			has_building = "building_portal_2"
+			has_building = "building_portal_21"
+			has_building = "building_portal_31"
+		}
+				}
+				set_blocker = "tb_crater"
+			}
+		}
+	}
+	
+	is_triggered_only = yes
+}
+
+#Unrest1 #Errors
+planet_event = {
+	id = gms_abh.4
+	title = "gms_abh_4"
+	desc = "gms_abh_4_desc"
+	picture = GFX_evt_physics_research
+	show_sound = event_laboratory_sound
+	
+	trigger = {
+		OR = {
+			has_building = "building_portal"
+			has_building = "building_portal_2"
+			has_building = "building_portal_21"
+			has_building = "building_portal_31"
+		}
+		owner = { NOT = {has_country_flag = gms_unrest_chain}}
+	}
+	
+	option = {
+		name = gms_abh_4.option_1
+		owner = { 
+			add_physics_research = 1000
+		}
+		hidden_effect = {
+			random_list = {
+				50 = {
+					planet_event = {id = gms_abh.5 days = 120}
+					owner = { set_country_flag = gms_unrest_chain }
+				}
+				50 = {
+					
+				}
+			}
+		}
+	}
+	
+	is_triggered_only = yes
+}
+
+#Unrest2	#Work: Longer Modifiers?
+planet_event = {
+	id = gms_abh.5
+	title = "gms_abh_5"
+	desc = "gms_abh_5_desc"
+	picture = GFX_evt_alien_propaganda
+	show_sound = event_planetary_riot
+	
+	trigger = {
+		OR = {
+			has_building = "building_portal"
+			has_building = "building_portal_2"
+			has_building = "building_portal_21"
+			has_building = "building_portal_31"
+		}
+	}
+	
+	is_triggered_only = yes
+	
+	#Calm them down
+	option = {
+		name = gms_abh_5.option_1
+		hidden_effect = {
+			add_modifier = {
+				modifier = gms_black_hole_hidden_unrest
+				days = 1800
+			}
+			owner = {remove_country_flag = gms_unrest_chain}
+		}
+		trigger = {
+			owner = {
+				NOR = {
+					has_ethic = ethic_fanatic_authoritarian
+					has_ethic = ethic_authoritarian
+				}
+			}
+		}
+	}
+	
+	#Struck it down
+	option = {
+		name = gms_abh_5.option_2
+		hidden_effect = {
+			random_list = {
+			
+				#pops try to escape
+				25 = {planet_event = { id = gms_abh.9 days = 120 }}
+				
+				#rebellion
+				#15 = {planet_event = { id = gms_abh.10 days = 120}}
+				
+				#nothing
+				75 = {
+					owner = {remove_country_flag = gms_unrest_chain}
+				}
+			}
+		}
+		trigger = {
+			owner = {
+				OR = {
+					has_ethic = ethic_fanatic_authoritarian
+					has_ethic = ethic_authoritarian
+					has_ethic = ethic_militarist
+					has_ethic = ethic_fanatic_militarist
+				}
+			}
+		}
+	}
+	
+	#Ignore it
+	option = {
+		name = gms_abh_5.option_3
+		hidden_effect = {
+			add_modifier = {
+				modifier = gms_black_hole_unrest
+				days = 720
+			}
+			owner = {remove_country_flag = gms_unrest_chain}
+		}
+	}
+}
+
+#Apocalypse #Done
+planet_event = {
+	id = gms_abh.6
+	title = "gms_abh_6"
+	desc = "gms_abh_6_desc"
+	picture = GFX_evt_black_hole
+	show_sound = event_red_alert
+	
+	trigger = {
+		OR = {
+			has_building = "building_portal"
+			has_building = "building_portal_2"
+			has_building = "building_portal_21"
+			has_building = "building_portal_31"
+		}
+	}
+	
+	option = {
+		name = gms_alarming
+		hidden_effect = {
+			set_name = "NAME_devouring_void"
+		}
+	}
+	
+	option = {
+		name = gms_abh_operate_safer
+		trigger = {
+			owner = {
+				AND = {
+					has_country_flag = gms_black_hole_explosion
+					NOT = {has_country_flag = gms_safer_operations}
+				}
+			}
+		}
+		hidden_effect = {
+			owner = { set_country_flag = gms_safer_operations }
+			set_name = "NAME_devouring_void"
+			orbital_deposit_tile = {
+				set_deposit = physics_research
+			}
+		}
+		owner = {add_research_option = ig_tech_dark_hole_stabilization}
+	}
+	
+	immediate = {
+		owner = {
+			set_country_flag = gms_black_hole_explosion
+			set_country_flag = gms_abh_explosion_apocalyptic
+		}
+		change_pc = pc_black_hole
+		
+		every_tile = {
+			clear_deposits = yes
+		}
+		
+		#Sets planet size
+		WHILE = {
+			count = 25
+			IF = {
+				limit = {
+					planet_size > 1
+				}
+				change_planet_size = -1
+			}
+		}
+	}
+	is_triggered_only = yes
+}
+
+#Planet Destruction		#Done
+planet_event = {
+	id = gms_abh.7
+	title = "gms_abh_7"
+	desc = "gms_abh_7_desc"
+	picture = GFX_evt_exploding_planet		
+	show_sound = event_super_explosion
+	
+	trigger = {
+		OR = {
+			has_building = "building_portal"
+			has_building = "building_portal_2"
+			has_building = "building_portal_21"
+			has_building = "building_portal_31"
+		}
+	}
+	
+	option = {
+		name = gms_abh_operate_safer
+		trigger = {
+			owner = {
+				AND = {
+					has_country_flag = gms_black_hole_explosion
+					NOT = {has_country_flag = gms_safer_operations}
+				}
+				
+			}
+		}
+		hidden_effect = {
+			owner = { set_country_flag = gms_safer_operations }
+		}
+		owner = {add_research_option = ig_tech_dark_hole_stabilization}
+	}
+	
+	option = {
+		name = UNFORTUNATE
+	}
+	
+	immediate = {
+		owner = {
+			set_country_flag = gms_black_hole_explosion
+			set_country_flag = gms_abh_explosion_planetary
+		}
+		
+		#Clear Planet
+		every_tile = {
+			clear_deposits = yes
+		}
+		
+		change_pc = pc_void
+		create_ambient_object = {
+			type = large_debris_object
+			location = this
+		}
+	}
+	is_triggered_only = yes
+}
+
+#Communication interrupted
+#planet_event = {
+#	id = gms_abh.8
+#	title = "gms_abh_8"
+#	desc = "gms_abh_8_desc"
+#	picture = GFX_evt_satellite_in_orbit
+#	show_sound = event_radio_chatter_02
+#	
+#	trigger = {
+#		has_building = "building_portal"
+#		owner = {
+#			NOT = {has_country_flag = gms_connection_lost_chain}
+#		}
+#	}
+#	
+#	#Work: Cut Connection
+#	immediate = {
+#		safe_pop_count_on_planet = yes
+#		owner = {
+#			set_country_flag = gms_connection_lost_chain
+#		}
+#		surveyed = {
+#			set_surveyed = no
+#			surveyor = owner
+#   		}
+#	}
+#	
+#	#Work: Special Project
+#	option = {
+#		name = gms_abh_8.option_1
+#		owner = {
+#			enable_special_project = {
+#				name = "gms_sp_black_hole_connection_lost"
+#				location = this
+#			}
+#		}
+#		
+#	}
+#	
+#	mean_time_to_happen = {
+#		days = 10
+#	}
+#}
+
+
+#################
+#Unrest events
+#################
+
+
+#Mass Panic #Done
+planet_event = {
+	id = gms_abh.9
+	title = "gms_abh_9"
+	desc = "gms_abh_9_desc"
+	picture = GFX_evt_burning_settlement
+	show_sound = event_planetary_riot
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		add_modifier = {
+			modifier = gms_black_hole_mass_panic
+			days = 500
+		}
+		owner = {remove_country_flag = gms_unrest_chain}
+	}
+	
+	option = {
+		name = UNFORTUNATE
+	}
+}
+
+#Rebellion
+planet_event = {
+	id = gms_abh.10
+	title = "gms_abh_10"
+	desc = "gms_abh_10_desc"
+	picture = GFX_evt_burning_settlement
+	show_sound = event_planetary_riot
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		owner = {remove_country_flag = gms_unrest_chain}
+			#Gets a pop on the planet
+		random_pop = {
+			save_event_target_as = leader_pop
+		}
+			#Creats the faction
+		create_rebels = {
+			name = "NAME_Anti_Black_Hole_Rebels"
+			ethos = {
+				ethic = "ethic_egalitarian"
+				ethic = "ethic_militarist"
+				ethic = random
+			}
+			authority = auth_democratic
+			civics = random
+			species = event_target:leader_pop.species
+			flag = random
+
+			effect = {
+				set_country_flag = black_hole_rebels
+				save_event_target_as = rebels
+				establish_communications_no_message = root.owner
+				root = {
+					owner = {
+						every_relation = {
+							limit = { has_communications = prev }
+							establish_communications_no_message = prevprevprev
+						}
+					}
+					every_owned_planet = {
+						limit = {
+							OR = {
+			has_building = "building_portal"
+			has_building = "building_portal_2"
+			has_building = "building_portal_21"
+			has_building = "building_portal_31"
+		}
+						}
+						while = {
+							count = 3
+							create_army = {
+								name = "NAME_Black_Hole_Rebellion"
+								owner = event_target:rebels
+								species = event_target:leader_pop.species
+								type = "defense_army"
+							}
+						}
+					}
+				}
+				create_leader = {
+					type = ruler
+					species = owner_main_species
+					name = random
+					skill = 200
+					traits = {}
+				}
+				assign_leader = last_created_leader
+				ruler = {
+					add_random_leader_trait = yes
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = gms_alarming
+	}
+}

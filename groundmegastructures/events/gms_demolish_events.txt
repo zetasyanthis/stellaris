@@ -1,0 +1,194 @@
+namespace = gms_building
+
+#accommodation
+planet_event = {
+	id = gms_building.1
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		from = {
+			has_prev_building = mt_building_accommodation
+		}
+	}
+
+	immediate = {
+		owner = {
+			change_variable = {
+				which = ig_acc_built
+				value = -1
+			}
+		}
+	}
+}
+
+#science lab
+planet_event = {
+	id = gms_building.2
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		from = {
+			has_prev_building = mt_building_researches
+		}
+	}
+
+	immediate = {
+		owner = {
+			change_variable = {
+				which = ig_researches_built
+				value = -1
+			}
+		}
+	}
+}
+
+#battery
+planet_event = {
+	id = gms_building.3
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		from = {
+			has_prev_building = building_battery
+		}
+	}
+
+	immediate = {
+		owner = {
+			change_variable = {
+				which = ig_battery_built
+				value = -1
+			}
+		}
+	}
+}
+
+#government
+planet_event = {
+	id = gms_building.4
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		from = {
+			OR = {
+				has_prev_building = building_gms_xenophob
+				has_prev_building = building_gms_f_xenophob
+				has_prev_building = building_gms_xenophil
+				has_prev_building = building_gms_f_xenophil
+				has_prev_building = building_gms_militarist
+				has_prev_building = building_gms_f_militarist
+				has_prev_building = building_gms_pacifist
+				has_prev_building = building_gms_f_pacifist
+				has_prev_building = building_gms_spiritualist
+				has_prev_building = building_gms_f_spiritualist
+				has_prev_building = building_gms_materialist
+				has_prev_building = building_gms_f_materialist
+				has_prev_building = building_gms_authoritarian
+				has_prev_building = building_gms_f_authoritarian
+				has_prev_building = building_gms_egalitarian
+				has_prev_building = building_gms_f_egalitarian
+			}
+		}
+	}
+
+	immediate = {
+		owner = {
+			change_variable = {
+				which = gms_government_built
+				value = -1
+			}
+		}
+	}
+}
+
+#administration executive
+planet_event = {
+	id = gms_building.5
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		from = {
+			has_prev_building = building_admincomplex_executive
+		}
+	}
+
+	immediate = {
+		owner = {
+			change_variable = {
+				which = ig_admincomplex_executive
+				value = -1
+			}
+		}
+	}
+}
+
+#administration order
+planet_event = {
+	id = gms_building.6
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		from = {
+			has_prev_building = building_admincomplex_government_order
+		}
+	}
+
+	immediate = {
+		owner = {
+			change_variable = {
+				which = ig_admincomplex_order
+				value = -1
+			}
+		}
+	}
+}
+
+#administration recruitment
+planet_event = {
+	id = gms_building.7
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		from = {
+			has_prev_building = building_admincomplex_government_recruitment
+		}
+	}
+
+	immediate = {
+		owner = {
+			change_variable = {
+				which = ig_admincomplex_recruitment
+				value = -1
+			}
+		}
+	}
+}
+
+#administration improves
+planet_event = {
+	id = gms_building.8
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		from = {
+			has_prev_building = building_admincomplex_government_improves
+		}
+	}
+
+	immediate = {
+		owner = {
+			change_variable = {
+				which = ig_admincomplex_improves
+				value = -1
+			}
+		}
+	}
+}

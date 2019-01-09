@@ -1,0 +1,479 @@
+building_portal = {
+	requires_pop = yes
+	base_buildtime = 1800
+	empire_unique = yes
+	
+	cost = {
+		minerals = 2000
+		energy = 1500
+	}
+	
+	produced_resources = {
+		physics_research = 16
+		sr_dark_matter = 1
+	}
+	
+	potential = {
+		planet = {
+			NOR = {
+				is_planet_class = pc_habitat
+				is_planet_class = pc_ringworld_habitable
+			}
+		}
+		owner = {
+			any_planet_within_border = {
+				NOR = {
+					has_building = "building_portal_2"
+					has_building = "building_portal_21"
+					has_building = "building_portal_3"
+					has_building = "building_portal_31"
+				}
+			}
+		}
+	}
+	
+	country_modifier = {
+		category_field_manipulation_research_speed_mult = 0.2
+	}
+	
+	planet_modifier = {
+		pop_happiness = -0.02
+	}
+	
+	required_resources = {
+		energy = 25
+	}
+	
+	destroy_if = {
+		planet = {is_capital = yes}
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_building_capital_2"
+			planet = {
+				OR = {
+					has_building = "building_capital_2"
+					has_building = "building_capital_3"
+					has_building = "building_commerce_coord"
+					has_building = "building_novus_capital_4"
+					has_building = "building_novus_capital_5"
+					has_building = "building_farming_guild"
+					has_building = "building_machine_capital_2"
+					has_building = "building_machine_capital_3"
+				}		
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requirement_not_homeworld"
+			planet = {
+				is_capital = no
+			}
+		}
+	}
+	
+	prerequisites = {
+		"ig_tech_dark_hole_theories"
+	}
+	
+	 
+	
+	ai_weight = {
+		weight = 100
+	}
+	
+	upgrades = {
+		"building_portal_2"
+		"building_portal_21"
+	}
+}
+
+building_small_administration_ai = {
+	base_buildtime = 1000
+	planet_unique = yes
+	
+	cost = {
+		minerals = 2500
+		energy = 250
+		influence = 25
+	}
+	
+	potential = {
+		planet = {
+			OR = {
+				is_planet_class = pc_habitat
+				is_planet_class = pc_ringworld_habitable
+			}
+		}
+	}
+	
+	destroy_if = {
+		OR = {
+			owner = { has_policy_flag = ai_outlawed }
+			planet = { is_capital = yes}
+		}
+	}
+	
+	allow = {
+		custom_tooltip = {
+			fail_text = "requirement_not_homeworld"
+			planet = {
+				is_capital = no
+			}
+		}
+		custom_tooltip = {
+			fail_text = "needs_right_policies"
+			owner = { NOT = {has_policy_flag = ai_outlawed }}
+		}
+	}
+	
+	required_resources = {
+		energy = 6.5
+	}
+	
+	prerequisites = {
+		"ig_tech_small_administration_ai"
+	}
+	
+	ai_weight = {
+		weight = 40
+	}
+	
+	produced_resources = {
+		influence = 0.01
+		unity = 5
+	}
+	
+	country_modifier = {
+		all_technology_research_speed = 0.005
+	}
+	
+	planet_modifier = {
+		planet_sensor_range_add = 1
+		planet_building_cost_mult = -0.2
+		planet_building_upkeep_mult = -0.2
+		planet_army_build_cost_mult = -0.25
+		planet_army_build_speed_mult = 0.4
+	}
+}
+
+building_planetary_drill = {
+	base_buildtime = 3800
+	empire_unique = yes
+	
+	potential = {
+		planet = {
+			NOR = { 
+				is_planet_class = pc_habitat
+				is_planet_class = pc_ringworld_habitable
+			}
+		}		
+	}
+	
+	allow = {
+		custom_tooltip = {
+			fail_text = "requires_building_capital_2"
+			planet = {
+				OR = {
+					has_building = "building_capital_2"
+					has_building = "building_capital_3"
+					has_building = "building_novus_capital_4"
+					has_building = "building_novus_capital_5"
+					has_building = "building_farming_guild"
+					has_building = "building_machine_capital_2"
+					has_building = "building_machine_capital_3"
+				}		
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requirement_not_homeworld"
+			planet = {
+				is_capital = no
+			}
+		}
+	}
+	
+	cost = {
+		minerals = 10000
+		energy = 1000
+		influence = 100
+	}
+	
+	required_resources = {
+		energy = 10
+	}
+	
+	prerequisites = {
+		"ig_tech_planetary_drill"
+	}
+	
+	ai_weight = {
+		weight = 35
+	}
+	
+	produced_resources = {
+		minerals = 150
+	}
+	
+	adjacency_bonus = {
+		tile_building_resource_minerals_add = 3
+	}
+	
+	country_modifier = {
+		country_resource_minerals_mult = 0.05
+	}
+	
+	planet_modifier = {
+		tile_resource_minerals_mult = 0.1
+		pop_happiness = -0.02
+	}
+}
+
+building_administration_complex = {
+	requires_pop = yes
+	base_buildtime = 280
+	is_listed = no
+	
+	cost = {
+		minerals = 250
+		influence = 50
+	}
+	
+	produced_resources = {
+		influence = 0.15
+		unity = 3
+		society_research = 1
+	}
+	
+	required_resources = {
+		energy = 2
+	}
+	
+	country_modifier = {
+		category_statecraft_research_speed_mult = 0.02
+		country_leader_cap = 1
+		leader_governor_cost = -0.025
+		edict_cost = -0.025
+		edict_length_mult = 0.025
+	}
+	
+	potential = {
+		planet = {
+			is_capital = yes
+		}
+	}
+	
+	destroy_if = {
+		planet = { is_capital = no }
+	}
+	
+	allow = {
+		custom_tooltip = {
+			fail_text = "requires_any_empire_capital"
+			planet = {
+				NOR = {
+					has_building = "building_capital_1"
+					has_building = "building_capital_2"
+					has_building = "building_machine_capital_1"
+					has_building = "building_machine_capital_2"
+				}		
+			}
+		}
+	}
+	
+	prerequisites = {
+		"ig_tech_administration_complexes"
+	}
+	
+	 
+	
+	ai_weight = {
+		weight = 100
+	}
+}
+
+building_administration_ai = {
+	base_buildtime = 4800
+	requires_pop = yes
+	empire_unique = yes
+	requires_pop = no
+	
+	cost = {
+		minerals = 10000
+		energy = 1000
+		influence = 100
+	}
+	
+	produced_resources = {
+		influence = 1
+		unity = 15
+	}
+	
+	required_resources = {
+		energy = 15
+	}
+	
+	potential = {
+		planet = {
+			is_capital = yes
+		}
+	}
+	
+	destroy_if = {
+		OR = {
+			planet = { is_capital = no }
+			owner = { 
+				has_policy_flag = ai_outlawed 
+			}
+		}
+		
+	}
+	
+	country_modifier = {
+		all_technology_research_speed = 0.05
+		country_resource_influence_mult = 0.1
+		country_core_sector_system_cap = 1
+		edict_length_mult = 0.25
+	}
+	
+	ai_weight = {
+		weight = 100
+	}
+	
+	prerequisites = {
+		"ig_tech_administration_ai"
+	}
+	
+	 
+	
+	allow = {
+		custom_tooltip = {
+			fail_text = "requires_any_empire_capital"
+			planet = {
+				NOR = {
+					has_building = "building_capital_1"
+					has_building = "building_capital_2"
+					has_building = "building_machine_capital_1"
+					has_building = "building_machine_capital_2"
+				}		
+			}
+		}
+		custom_tooltip = {
+			fail_text = "needs_right_policies"
+			owner = {
+				OR = {
+					NOT = {has_policy_flag = ai_outlawed }
+				}
+			}
+		}
+	}
+}
+
+building_ig_mining_corparation = {
+	base_buildtime = 360
+	empire_unique = yes
+	
+	cost = {
+		minerals = 500
+		influence = 100
+	}
+	
+	produced_resources = {
+		minerals = 10
+	}
+	
+	potential = {
+		planet = {
+			is_capital = yes
+		}
+	}
+
+	destroy_if = {
+		planet = { is_capital = no }
+	}	
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_any_empire_capital"
+			planet = {
+				NOR = {
+					has_building = "building_capital_1"
+					has_building = "building_capital_2"
+					has_building = "building_machine_capital_1"
+					has_building = "building_machine_capital_2"
+				}		
+			}
+		}
+	}
+	
+	produced_resource_trigger = {
+		modifier = {
+			has_civic = civic_mining_guilds
+			resources = {
+				unity = 8
+			}
+		}
+	}
+	
+	country_modifier = {
+		tile_resource_minerals_mult = 0.10
+	}
+	
+	prerequisites = {
+		"ig_tech_mining_corparation"
+	}
+	
+	 
+	
+	ai_weight = {
+		weight = 10000	
+	}
+}
+
+#building_gms_defenses = {
+#	base_buildtime = 360
+#	planet_unique = yes
+#	
+#	cost = {
+#		minerals = 640
+#	}
+#	
+#	produced_resources = {
+#		unity = 2
+#	}
+#	
+#	allow = {
+#		custom_tooltip = {
+#			fail_text = "requires_building_capital_2"
+#			planet = {
+#				OR = {
+#					has_building = "building_capital_2"
+#					has_building = "building_capital_3"
+#					has_building = "building_novus_capital_4"
+#					has_building = "building_novus_capital_5"
+#					has_building = "building_farming_guild"
+#					has_building = "building_machine_capital_2"
+#					has_building = "building_machine_capital_3"
+#				}		
+#			}
+#		}
+#	}
+#	
+#	modifiers = {
+#		pop_happiness = 0.05
+#		planet_fortification_strength = 0.4
+#		planet_border_add = 0.1
+#	}
+#	
+#	prerequisites = {
+#		"ig_tech_gms_defenses"
+#	}
+#	
+#	required_resources = {
+#		energy = 1.5
+#	}
+#	
+#	ai_weight = {
+#		weight = 45
+#	}
+#}

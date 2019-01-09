@@ -1,0 +1,21 @@
+#A building construction has been completed.
+# This = Planet
+# From = Tile
+on_building_complete = {
+	events = {
+		gms_abh.1
+	}
+}
+
+on_building_demolished = {
+	events = {
+		gms_building.1
+		gms_building.2
+		gms_building.3
+		gms_building.4
+		gms_building.5
+		gms_building.6
+		gms_building.7
+		gms_building.8
+	}
+}

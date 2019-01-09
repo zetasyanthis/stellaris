@@ -1,0 +1,95 @@
+ig_tech_dark_hole_theories = {
+	area = physics
+	cost = 2500
+	cost_per_level = 1000
+	tier = 3
+	is_dangerous = yes
+	is_rare = yes
+	category = {field_manipulation}
+	levels = 1
+	prerequisites = {"tech_mine_dark_matter" "tech_mega_engineering"}
+	weight = 22
+	
+	weight_modifier = {
+		factor = 1.0
+	}
+	
+	ai_weight = {
+		factor = 1.0
+	}
+	#Unlocks the artificial black hole
+}
+
+ig_tech_dark_hole_stabilization = {
+	area = physics
+	cost = 3250
+	tier = 3
+	is_rare = yes
+	category = {field_manipulation}
+	levels = 1
+	prerequisites = {"ig_tech_dark_hole_theories"}
+	weight = 10
+	#Unlocks the artificial black hole tier 2
+}
+
+ig_tech_dark_hole_perfection = {
+	area = physics
+	cost = 10000
+	tier = 4
+	is_rare = yes
+	category = {field_manipulation}
+	levels = 1
+	prerequisites = {"ig_tech_dark_hole_stabilization"}
+	weight = 5
+	#Unlocks the artificial black hole tier 3
+}
+
+ig_tech_dark_hole_2 = {
+	area = physics
+	cost = 3000
+	category = {field_manipulation}
+	levels = 1
+	tier = 3
+	prerequisites = {"ig_tech_dark_hole_theories"}
+	weight = 25
+}
+
+ig_tech_dark_hole_3 = {
+	area = physics
+	cost = 4500
+	category = {field_manipulation}
+	levels = 1
+	tier = 4
+	is_dangerous = yes
+	prerequisites = {"ig_tech_dark_hole_2"}
+	weight = 15
+}
+
+ig_tech_small_administration_ai = {
+	area = physics
+	cost = 2500
+	tier = 3
+	category = {computing}
+	levels = 1
+	weight = 25
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0.0
+			NOR = {
+				has_policy_flag = ai_servitude
+				has_policy_flag = ai_full_rights
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 0.0
+			NOR = {
+				has_policy_flag = ai_servitude
+				has_policy_flag = ai_full_rights
+			}
+		}
+	}
+}

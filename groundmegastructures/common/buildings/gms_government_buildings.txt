@@ -1,0 +1,1724 @@
+building_gms_xenophob = {
+	base_buildtime = 2400
+	empire_unique = yes
+	
+	cost = {
+		minerals = 5000
+		influence = 250
+	}
+	
+	potential = {
+		planet = {
+			AND = {
+				is_capital = yes
+				#Empire Unique
+				owner = {
+					check_variable = {
+						which = gms_government_built
+						value = 0
+					}
+				}
+				#Ethic
+				owner = {
+					OR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+					}
+				}
+			}
+		}
+	}
+	
+	allow = {
+		custom_tooltip = {
+			fail_text = "requires_any_empire_capital"
+			planet = {
+				NOR = {
+					has_building = "building_capital_1"
+					has_building = "building_capital_2"
+				}		
+			}
+		}
+	}
+	
+	destroy_if = {
+		OR = {
+			planet = {
+				is_capital = no
+			}
+		}
+	}
+	
+	on_queued = {
+		planet = {
+			owner = {
+				if = {
+					limit = {
+						check_variable = {
+							which = gms_government_built
+							value < 1
+						}
+					}
+					set_variable = {
+						which = gms_government_built
+						value = 1
+					}
+					
+					else = {
+						change_variable = {
+							which = gms_government_built
+							value = 1
+						}
+					}
+				}
+				set_country_flag = gms_on_tick_disabled
+			}
+		}
+	}
+	
+	on_unqueued = {
+		planet = {
+			owner = {
+				change_variable = {
+					which = gms_government_built
+					value = -1
+				}
+			}
+		}
+	}
+	
+	produced_resources = {
+		influence = 0.5
+		unity = 8
+	}
+	
+	country_modifier = {
+		country_core_sector_system_cap = 1
+		country_government_civic_points_add = 1
+		pop_government_ethic_attraction = 0.1
+		max_rivalries = 1
+		country_starbase_influence_cost_mult = -0.1
+		rivalry_influence_gain = 0.25
+		country_trust_growth = -0.1
+		
+	}
+	
+	prerequisites = {
+		"ig_tech_government"
+	}
+	
+	upgrades = {
+		building_gms_f_xenophob
+	}
+}
+
+building_gms_f_xenophob = {
+	is_listed = no
+	base_buildtime = 2400
+	empire_unique = yes
+	
+	cost = {
+		minerals = 5000
+		influence = 250
+	}
+	
+	potential = {
+	AND = {
+		planet = {
+			AND = {
+				is_capital = yes
+				#Ethic
+				owner = {
+					has_ethic = ethic_fanatic_xenophobe
+				}
+			}
+		}
+		owner = {
+			has_technology = "ig_tech_government"
+		}
+		}
+	}
+	
+	allow = {
+		custom_tooltip = {
+			fail_text = "requires_any_empire_capital"
+			planet = {
+				NOR = {
+					has_building = "building_capital_1"
+					has_building = "building_capital_2"
+				}		
+			}
+		}
+	}
+	
+	destroy_if = {
+		OR = {
+			planet = {
+				is_capital = no
+			}
+		}
+	}
+	
+	on_queued = {
+		planet = {
+			owner = {
+				if = {
+					limit = {
+						check_variable = {
+							which = gms_government_built
+							value < 1
+						}
+					}
+					set_variable = {
+						which = gms_government_built
+						value = 1
+					}
+					
+					else = {
+						change_variable = {
+							which = gms_government_built
+							value = 1
+						}
+					}
+				}
+				set_country_flag = gms_on_tick_disabled
+			}
+		}
+	}
+	
+	on_unqueued = {
+		planet = {
+			owner = {
+				change_variable = {
+					which = gms_government_built
+					value = -1
+				}
+			}
+		}
+	}
+	
+	produced_resources = {
+		influence = 0.5
+		unity = 10
+	}
+	
+	country_modifier = {
+		country_core_sector_system_cap = 2
+		country_government_civic_points_add = 1
+		max_rivalries = 2
+		country_starbase_influence_cost_mult = -0.25
+		rivalry_influence_gain = 0.5
+		pop_government_ethic_attraction = 0.15
+		diplomacy_influence_cost = 0.15
+		country_trust_growth = -0.2
+	}
+}
+
+building_gms_xenophil = {
+	base_buildtime = 2400
+	empire_unique = yes
+	
+	cost = {
+		minerals = 5000
+		influence = 250
+	}
+	
+	potential = {
+	AND = {
+		planet = {
+			AND = {
+				is_capital = yes
+				#Empire Unique
+				owner = {
+					check_variable = {
+						which = gms_government_built
+						value = 0
+					}
+				}
+				#Ethic
+				owner = {
+					OR = {
+						has_ethic = ethic_xenophile
+						has_ethic = ethic_fanatic_xenophile
+					}
+				}
+			}
+		}
+		owner = {
+			has_technology = "ig_tech_government"
+		}
+		}
+	}
+	
+	allow = {
+		custom_tooltip = {
+			fail_text = "requires_any_empire_capital"
+			planet = {
+				NOR = {
+					has_building = "building_capital_1"
+					has_building = "building_capital_2"
+				}		
+			}
+		}
+	}
+	
+	destroy_if = {
+		OR = {
+			planet = {
+				is_capital = no
+			}
+		}
+	}
+	
+	on_queued = {
+		planet = {
+			owner = {
+				if = {
+					limit = {
+						check_variable = {
+							which = gms_government_built
+							value < 1
+						}
+					}
+					set_variable = {
+						which = gms_government_built
+						value = 1
+					}
+					
+					else = {
+						change_variable = {
+							which = gms_government_built
+							value = 1
+						}
+					}
+				}
+				set_country_flag = gms_on_tick_disabled
+			}
+		}
+	}
+	
+	on_unqueued = {
+		planet = {
+			owner = {
+				change_variable = {
+					which = gms_government_built
+					value = -1
+				}
+			}
+		}
+	}
+	
+	upgrades = {
+		"building_gms_f_xenophil"
+	}
+	
+	produced_resources = {
+		influence = 0.5
+		unity = 5
+	}
+	
+	country_modifier = {
+		country_core_sector_system_cap = 1
+		country_government_civic_points_add = 1
+		pop_government_ethic_attraction = 0.1
+		country_trust_growth = 0.2
+		diplomacy_influence_cost = -0.15
+		planet_migration_xeno_pull = 0.05
+		country_federation_member_resource_unity_mult = 0.05
+		science_ship_survey_speed = 0.25
+	}
+}
+
+building_gms_f_xenophil = {
+	is_listed = no
+	base_buildtime = 2400
+	empire_unique = yes
+	
+	cost = {
+		minerals = 5000
+		influence = 250
+	}
+	
+	potential = {
+	AND = {
+		planet = {
+			AND = {
+				is_capital = yes
+				#Ethic
+				owner = {
+					has_ethic = ethic_fanatic_xenophile
+				}
+			}
+		}
+		owner = {
+			has_technology = "ig_tech_government"
+		}
+		}
+	}
+	
+	allow = {
+		custom_tooltip = {
+			fail_text = "requires_any_empire_capital"
+			planet = {
+				NOR = {
+					has_building = "building_capital_1"
+					has_building = "building_capital_2"
+				}		
+			}
+		}
+	}
+	
+	destroy_if = {
+		OR = {
+			planet = {
+				is_capital = no
+			}
+		}
+	}
+	
+	on_queued = {
+		planet = {
+			owner = {
+				if = {
+					limit = {
+						check_variable = {
+							which = gms_government_built
+							value < 1
+						}
+					}
+					set_variable = {
+						which = gms_government_built
+						value = 1
+					}
+					
+					else = {
+						change_variable = {
+							which = gms_government_built
+							value = 1
+						}
+					}
+				}
+				set_country_flag = gms_on_tick_disabled
+			}
+		}
+	}
+	
+	on_unqueued = {
+		planet = {
+			owner = {
+				change_variable = {
+					which = gms_government_built
+					value = -1
+				}
+			}
+		}
+	}
+	
+	produced_resources = {
+		influence = 0.5
+		unity = 7
+	}
+	
+	country_modifier = {
+		country_core_sector_system_cap = 2
+		country_government_civic_points_add = 1
+		pop_government_ethic_attraction = 0.15
+		country_trust_growth = 0.5
+		diplomacy_influence_cost = -0.25
+		planet_migration_xeno_pull = 0.1
+		country_federation_member_resource_unity_mult = 0.1
+		science_ship_survey_speed = 0.5
+	}
+}
+
+building_gms_militarist = {
+	base_buildtime = 2400
+	empire_unique = yes
+	
+	cost = {
+		minerals = 5000
+		influence = 250
+	}
+	
+	potential = {
+	AND = {
+		planet = {
+			AND = {
+				is_capital = yes
+				#Empire Unique
+				owner = {
+					check_variable = {
+						which = gms_government_built
+						value = 0
+					}
+				}
+				#Ethic
+				owner = {
+					OR = {
+						has_ethic = ethic_militarist
+						has_ethic = ethic_fanatic_militarist
+					}
+				}
+			}
+		}
+		owner = {
+			has_technology = "ig_tech_government"
+		}
+		}
+	}
+	
+	allow = {
+		custom_tooltip = {
+			fail_text = "requires_any_empire_capital"
+			planet = {
+				NOR = {
+					has_building = "building_capital_1"
+					has_building = "building_capital_2"
+				}		
+			}
+		}
+	}
+	
+	destroy_if = {
+		OR = {
+			planet = {
+				is_capital = no
+			}
+		}
+	}
+	
+	on_queued = {
+		planet = {
+			owner = {
+				if = {
+					limit = {
+						check_variable = {
+							which = gms_government_built
+							value < 1
+						}
+					}
+					set_variable = {
+						which = gms_government_built
+						value = 1
+					}
+					
+					else = {
+						change_variable = {
+							which = gms_government_built
+							value = 1
+						}
+					}
+				}
+				set_country_flag = gms_on_tick_disabled
+			}
+		}
+	}
+	
+	on_unqueued = {
+		planet = {
+			owner = {
+				change_variable = {
+					which = gms_government_built
+					value = -1
+				}
+			}
+		}
+	}
+	
+	upgrades = {
+		"building_gms_f_militarist"
+	}
+	
+	produced_resources = {
+		influence = 0.5
+		unity = 5
+	}
+	
+	country_modifier = {
+		country_core_sector_system_cap = 1
+		country_government_civic_points_add = 1
+		pop_government_ethic_attraction = 0.05
+		max_rivalries = 1
+		ship_weapon_damage = 0.04
+		army_damage_mult = 0.05
+		ship_fire_rate_mult = 0.04
+		country_naval_cap_mult = 0.1
+		country_claim_influence_cost_mult = -0.1
+	}
+}
+
+building_gms_f_militarist = {
+	is_listed = no
+	base_buildtime = 2400
+	empire_unique = yes
+	
+	cost = {
+		minerals = 5000
+		influence = 250
+	}
+	
+	potential = {
+	AND = {
+		planet = {
+			AND = {
+				is_capital = yes
+				#Ethic
+				owner = {
+					has_ethic = ethic_fanatic_militarist
+				}
+			}
+		}
+		owner = {
+			has_technology = "ig_tech_government"
+		}
+		}
+	}
+	
+	allow = {
+		custom_tooltip = {
+			fail_text = "requires_any_empire_capital"
+			planet = {
+				NOR = {
+					has_building = "building_capital_1"
+					has_building = "building_capital_2"
+				}		
+			}
+		}
+	}
+	
+	destroy_if = {
+		OR = {
+			planet = {
+				is_capital = no
+			}
+		}
+	}
+	
+	on_queued = {
+		planet = {
+			owner = {
+				if = {
+					limit = {
+						check_variable = {
+							which = gms_government_built
+							value < 1
+						}
+					}
+					set_variable = {
+						which = gms_government_built
+						value = 1
+					}
+					
+					else = {
+						change_variable = {
+							which = gms_government_built
+							value = 1
+						}
+					}
+				}
+				set_country_flag = gms_on_tick_disabled
+			}
+		}
+	}
+	
+	on_unqueued = {
+		planet = {
+			owner = {
+				change_variable = {
+					which = gms_government_built
+					value = -1
+				}
+			}
+		}
+	}
+	
+	produced_resources = {
+		influence = 0.5
+		unity = 7
+	}
+	
+	country_modifier = {
+		country_core_sector_system_cap = 2
+		country_government_civic_points_add = 1
+		pop_government_ethic_attraction = 0.1
+		max_rivalries = 2
+		ship_weapon_damage = 0.08
+		army_damage_mult = 0.1
+		ship_fire_rate_mult = 0.08
+		army_attack_damage_mult = 0.1
+		army_attack_morale_mult = 0.2
+		country_naval_cap_mult = 0.15
+		country_claim_influence_cost_mult = -0.2
+	}
+}
+
+building_gms_pacifist = {
+	base_buildtime = 2400
+	empire_unique = yes
+	
+	cost = {
+		minerals = 5000
+		influence = 250
+	}
+	
+	potential = {
+	AND = {
+		planet = {
+			AND = {
+				is_capital = yes
+				#Empire Unique
+				owner = {
+					check_variable = {
+						which = gms_government_built
+						value = 0
+					}
+				}
+				#Ethic
+				owner = {
+					OR = {
+						has_ethic = ethic_pacifist
+						has_ethic = ethic_fanatic_pacifist
+					}
+				}
+			}
+		}
+		owner = {
+			has_technology = "ig_tech_government"
+		}
+		}
+	}
+	
+	allow = {
+		custom_tooltip = {
+			fail_text = "requires_any_empire_capital"
+			planet = {
+				NOR = {
+					has_building = "building_capital_1"
+					has_building = "building_capital_2"
+				}		
+			}
+		}
+	}
+	
+	destroy_if = {
+		OR = {
+			planet = {
+				is_capital = no
+			}
+		}
+	}
+	
+	on_queued = {
+		planet = {
+			owner = {
+				if = {
+					limit = {
+						check_variable = {
+							which = gms_government_built
+							value < 1
+						}
+					}
+					set_variable = {
+						which = gms_government_built
+						value = 1
+					}
+					
+					else = {
+						change_variable = {
+							which = gms_government_built
+							value = 1
+						}
+					}
+				}
+				set_country_flag = gms_on_tick_disabled
+			}
+		}
+	}
+	
+	on_unqueued = {
+		planet = {
+			owner = {
+				change_variable = {
+					which = gms_government_built
+					value = -1
+				}
+			}
+		}
+	}
+	
+	upgrades = {
+		"building_gms_f_pacifist"
+	}
+	
+	produced_resources = {
+		influence = 0.5
+		unity = 8
+	}
+	
+	country_modifier = {
+		country_core_sector_system_cap = 2
+		country_government_civic_points_add = 1
+		pop_government_ethic_attraction = 0.1
+		max_rivalries = -1
+		country_resource_unity_mult = 0.15
+		country_federation_member_resource_unity_mult = 0.1
+		diplomacy_influence_cost = -0.2
+	}
+}
+
+building_gms_f_pacifist = {
+	is_listed = no
+	base_buildtime = 2400
+	empire_unique = yes
+	
+	cost = {
+		minerals = 5000
+		influence = 250
+	}
+	
+	potential = {
+	AND = {
+		planet = {
+			AND = {
+				is_capital = yes
+				#Ethic
+				owner = {
+					has_ethic = ethic_fanatic_pacifist
+				}
+			}
+		}
+		owner = {
+			has_technology = "ig_tech_government"
+		}
+		}
+	}
+	
+	allow = {
+		custom_tooltip = {
+			fail_text = "requires_any_empire_capital"
+			planet = {
+				NOR = {
+					has_building = "building_capital_1"
+					has_building = "building_capital_2"
+				}		
+			}
+		}
+	}
+	
+	destroy_if = {
+		OR = {
+			planet = {
+				is_capital = no
+			}
+		}
+	}
+	
+	on_queued = {
+		planet = {
+			owner = {
+				if = {
+					limit = {
+						check_variable = {
+							which = gms_government_built
+							value < 1
+						}
+					}
+					set_variable = {
+						which = gms_government_built
+						value = 1
+					}
+					
+					else = {
+						change_variable = {
+							which = gms_government_built
+							value = 1
+						}
+					}
+				}
+				set_country_flag = gms_on_tick_disabled
+			}
+		}
+	}
+	
+	on_unqueued = {
+		planet = {
+			owner = {
+				change_variable = {
+					which = gms_government_built
+					value = -1
+				}
+			}
+		}
+	}
+	
+	produced_resources = {
+		influence = 0.5
+		unity = 10
+	}
+	
+	country_modifier = {
+		country_core_sector_system_cap = 4
+		country_government_civic_points_add = 1
+		pop_government_ethic_attraction = 0.15
+		max_rivalries = -1
+		country_resource_unity_mult = 0.25
+		country_federation_member_resource_unity_mult = 0.15
+		diplomacy_influence_cost = -0.3
+	}
+}
+
+building_gms_spiritualist = {
+	base_buildtime = 2400
+	empire_unique = yes
+	
+	cost = {
+		minerals = 5000
+		influence = 250
+	}
+	
+	potential = {
+	AND = {
+		planet = {
+			AND = {
+				is_capital = yes
+				#Empire Unique
+				owner = {
+					check_variable = {
+						which = gms_government_built
+						value = 0
+					}
+				}
+				#Ethic
+				owner = {
+					OR = {
+						has_ethic = ethic_spiritualist
+						has_ethic = ethic_fanatic_spiritualist
+					}
+				}
+			}
+		}
+		owner = {
+			has_technology = "ig_tech_government"
+		}
+		}
+	}
+	
+	allow = {
+		custom_tooltip = {
+			fail_text = "requires_any_empire_capital"
+			planet = {
+				NOR = {
+					has_building = "building_capital_1"
+					has_building = "building_capital_2"
+				}		
+			}
+		}
+	}
+	
+	destroy_if = {
+		OR = {
+			planet = {
+				is_capital = no
+			}
+		}
+	}
+	
+	on_queued = {
+		planet = {
+			owner = {
+				if = {
+					limit = {
+						check_variable = {
+							which = gms_government_built
+							value < 1
+						}
+					}
+					set_variable = {
+						which = gms_government_built
+						value = 1
+					}
+					
+					else = {
+						change_variable = {
+							which = gms_government_built
+							value = 1
+						}
+					}
+				}
+				set_country_flag = gms_on_tick_disabled
+			}
+		}
+	}
+	
+	on_unqueued = {
+		planet = {
+			owner = {
+				change_variable = {
+					which = gms_government_built
+					value = -1
+				}
+			}
+		}
+	}
+	
+	upgrades = {
+		"building_gms_f_spiritualist"
+	}
+	
+	produced_resources = {
+		influence = 0.5
+		unity = 8
+	}
+	
+	country_modifier = {
+		country_core_sector_system_cap = 1
+		country_government_civic_points_add = 1
+		pop_government_ethic_attraction = 0.25
+		planet_unrest_add = -10
+		pop_happiness = 0.1
+	}
+}
+
+building_gms_f_spiritualist = {
+	is_listed = no
+	base_buildtime = 2400
+	empire_unique = yes
+	
+	cost = {
+		minerals = 5000
+		influence = 250
+	}
+	
+	potential = {
+	AND = {
+		planet = {
+			AND = {
+				is_capital = yes
+				#Ethic
+				owner = {
+					has_ethic = ethic_fanatic_spiritualist
+				}
+			}
+		}
+		owner = {
+			has_technology = "ig_tech_government"
+		}
+		}
+	}
+	
+	allow = {
+		custom_tooltip = {
+			fail_text = "requires_any_empire_capital"
+			planet = {
+				NOR = {
+					has_building = "building_capital_1"
+					has_building = "building_capital_2"
+				}		
+			}
+		}
+	}
+	
+	destroy_if = {
+		OR = {
+			planet = {
+				is_capital = no
+			}
+		}
+	}
+	
+	on_queued = {
+		planet = {
+			owner = {
+				if = {
+					limit = {
+						check_variable = {
+							which = gms_government_built
+							value < 1
+						}
+					}
+					set_variable = {
+						which = gms_government_built
+						value = 1
+					}
+					
+					else = {
+						change_variable = {
+							which = gms_government_built
+							value = 1
+						}
+					}
+				}
+				set_country_flag = gms_on_tick_disabled
+			}
+		}
+	}
+	
+	on_unqueued = {
+		planet = {
+			owner = {
+				change_variable = {
+					which = gms_government_built
+					value = -1
+				}
+			}
+		}
+	}
+	
+	produced_resources = {
+		influence = 0.5
+		unity = 10
+	}
+	
+	country_modifier = {
+		country_core_sector_system_cap = 2
+		country_government_civic_points_add = 1
+		pop_government_ethic_attraction = 0.5
+		planet_unrest_add = -15
+		pop_happiness = 0.15
+	}
+}
+
+building_gms_materialist = {
+	base_buildtime = 2400
+	empire_unique = yes
+	
+	cost = {
+		minerals = 5000
+		influence = 250
+	}
+	
+	potential = {
+	AND = {
+		planet = {
+			AND = {
+				is_capital = yes
+				#Empire Unique
+				owner = {
+					check_variable = {
+						which = gms_government_built
+						value = 0
+					}
+				}
+				#Ethic
+				owner = {
+					OR = {
+						has_ethic = ethic_materialist
+						has_ethic = ethic_fanatic_materialist
+					}
+				}
+			}
+		}
+		owner = {
+			has_technology = "ig_tech_government"
+		}
+		}
+	}
+	
+	allow = {
+		custom_tooltip = {
+			fail_text = "requires_any_empire_capital"
+			planet = {
+				NOR = {
+					has_building = "building_capital_1"
+					has_building = "building_capital_2"
+				}		
+			}
+		}
+	}
+	
+	destroy_if = {
+		OR = {
+			planet = {
+				is_capital = no
+			}
+		}
+	}
+	
+	on_queued = {
+		planet = {
+			owner = {
+				if = {
+					limit = {
+						check_variable = {
+							which = gms_government_built
+							value < 1
+						}
+					}
+					set_variable = {
+						which = gms_government_built
+						value = 1
+					}
+					
+					else = {
+						change_variable = {
+							which = gms_government_built
+							value = 1
+						}
+					}
+				}
+				set_country_flag = gms_on_tick_disabled
+			}
+		}
+	}
+	
+	on_unqueued = {
+		planet = {
+			owner = {
+				change_variable = {
+					which = gms_government_built
+					value = -1
+				}
+			}
+		}
+	}
+	
+	upgrades = {
+		"building_gms_f_materialist"
+	}
+	
+	produced_resources = {
+		influence = 0.5
+		unity = 5
+	}
+	
+	country_modifier = {
+		country_core_sector_system_cap = 1
+		country_government_civic_points_add = 1
+		pop_government_ethic_attraction = 0.1
+		planet_building_cost_mult = -0.15
+		planet_building_upkeep_mult = -0.1
+		country_resource_minerals_mult = 0.05
+		pop_robot_production_output = 0.05
+		pop_consumer_goods_mult = -0.075
+		pop_happiness = -0.025
+	}
+}
+
+building_gms_f_materialist = {
+	is_listed = no
+	base_buildtime = 2400
+	empire_unique = yes
+	
+	cost = {
+		minerals = 5000
+		influence = 250
+	}
+	
+	potential = {
+	AND = {
+		planet = {
+			AND = {
+				is_capital = yes
+				#Ethic
+				owner = {
+					has_ethic = ethic_fanatic_materialist
+				}
+			}
+		}
+		owner = {
+			has_technology = "ig_tech_government"
+		}
+		}
+	}
+	
+	allow = {
+		custom_tooltip = {
+			fail_text = "requires_any_empire_capital"
+			planet = {
+				NOR = {
+					has_building = "building_capital_1"
+					has_building = "building_capital_2"
+				}		
+			}
+		}
+	}
+	
+	destroy_if = {
+		OR = {
+			planet = {
+				is_capital = no
+			}
+		}
+	}
+	
+	on_queued = {
+		planet = {
+			owner = {
+				if = {
+					limit = {
+						check_variable = {
+							which = gms_government_built
+							value < 1
+						}
+					}
+					set_variable = {
+						which = gms_government_built
+						value = 1
+					}
+					
+					else = {
+						change_variable = {
+							which = gms_government_built
+							value = 1
+						}
+					}
+				}
+				set_country_flag = gms_on_tick_disabled
+			}
+		}
+	}
+	
+	on_unqueued = {
+		planet = {
+			owner = {
+				change_variable = {
+					which = gms_government_built
+					value = -1
+				}
+			}
+		}
+	}
+	
+	produced_resources = {
+		influence = 0.5
+		unity = 7
+	}
+	
+	country_modifier = {
+		country_core_sector_system_cap = 2
+		country_government_civic_points_add = 1
+		pop_government_ethic_attraction = 0.15
+		planet_building_cost_mult = -0.2
+		planet_building_upkeep_mult = -0.15
+		country_resource_minerals_mult = 0.05
+		pop_robot_production_output = 0.1
+		pop_consumer_goods_mult = -0.125
+		pop_happiness = -0.05
+	}
+}
+
+building_gms_authoritarian = {
+	base_buildtime = 2400
+	empire_unique = yes
+	
+	cost = {
+		minerals = 5000
+		influence = 250
+	}
+	
+	potential = {
+	AND = {
+		planet = {
+			AND = {
+				is_capital = yes
+				#Empire Unique
+				owner = {
+					check_variable = {
+						which = gms_government_built
+						value = 0
+					}
+				}
+				#Ethic
+				owner = {
+					OR = {
+						has_ethic = ethic_authoritarian
+						has_ethic = ethic_fanatic_authoritarian
+					}
+				}
+			}
+		}
+		owner = {
+			has_technology = "ig_tech_government"
+		}
+		}
+	}
+	
+	allow = {
+		custom_tooltip = {
+			fail_text = "requires_any_empire_capital"
+			planet = {
+				NOR = {
+					has_building = "building_capital_1"
+					has_building = "building_capital_2"
+				}		
+			}
+		}
+	}
+	
+	destroy_if = {
+		OR = {
+			planet = {
+				is_capital = no
+			}
+		}
+	}
+	
+	on_queued = {
+		planet = {
+			owner = {
+				if = {
+					limit = {
+						check_variable = {
+							which = gms_government_built
+							value < 1
+						}
+					}
+					set_variable = {
+						which = gms_government_built
+						value = 1
+					}
+					
+					else = {
+						change_variable = {
+							which = gms_government_built
+							value = 1
+						}
+					}
+				}
+				set_country_flag = gms_on_tick_disabled
+			}
+		}
+	}
+	
+	on_unqueued = {
+		planet = {
+			owner = {
+				change_variable = {
+					which = gms_government_built
+					value = -1
+				}
+			}
+		}
+	}
+	
+	upgrades = {
+		"building_gms_f_authoritarian"
+	}
+	
+	produced_resources = {
+		influence = 0.5
+		unity = 5
+	}
+	
+	country_modifier = {
+		country_core_sector_system_cap = 1
+		country_government_civic_points_add = 1
+		pop_government_ethic_attraction = 0.1
+		slave_mineral_output = 0.1
+		slave_food_output = 0.1
+		subject_tribute_mult = 0.25
+		subject_influence_gain_mult = 0.15
+	}
+}
+
+building_gms_f_authoritarian = {
+	is_listed = no
+	base_buildtime = 2400
+	empire_unique = yes
+	
+	cost = {
+		minerals = 5000
+		influence = 250
+	}
+	
+	potential = {
+	AND = {
+		planet = {
+			AND = {
+				is_capital = yes
+				#Ethic
+				owner = {
+					has_ethic = ethic_fanatic_authoritarian
+				}
+			}
+		}
+		owner = {
+			has_technology = "ig_tech_government"
+		}
+		}
+	}
+	
+	allow = {
+		custom_tooltip = {
+			fail_text = "requires_any_empire_capital"
+			planet = {
+				NOR = {
+					has_building = "building_capital_1"
+					has_building = "building_capital_2"
+				}		
+			}
+		}
+	}
+	
+	destroy_if = {
+		OR = {
+			planet = {
+				is_capital = no
+			}
+		}
+	}
+	
+	on_queued = {
+		planet = {
+			owner = {
+				if = {
+					limit = {
+						check_variable = {
+							which = gms_government_built
+							value < 1
+						}
+					}
+					set_variable = {
+						which = gms_government_built
+						value = 1
+					}
+					
+					else = {
+						change_variable = {
+							which = gms_government_built
+							value = 1
+						}
+					}
+				}
+				set_country_flag = gms_on_tick_disabled
+			}
+		}
+	}
+	
+	on_unqueued = {
+		planet = {
+			owner = {
+				change_variable = {
+					which = gms_government_built
+					value = -1
+				}
+			}
+		}
+	}
+	
+	produced_resources = {
+		influence = 0.5
+		unity = 7
+	}
+	
+	country_modifier = {
+		country_core_sector_system_cap = 2
+		country_government_civic_points_add = 1
+		pop_government_ethic_attraction = 0.15
+		slave_mineral_output = 0.15
+		slave_food_output = 0.15
+		subject_tribute_mult = 0.35
+		subject_influence_gain_mult = 0.25
+	}
+}
+
+building_gms_egalitarian = {
+	base_buildtime = 2400
+	empire_unique = yes
+	
+	cost = {
+		minerals = 5000
+		influence = 250
+	}
+	
+	potential = {
+	AND = {
+		planet = {
+			AND = {
+				is_capital = yes
+				#Empire Unique
+				owner = {
+					check_variable = {
+						which = gms_government_built
+						value = 0
+					}
+				}
+				#Ethic
+				owner = {
+					OR = {
+						has_ethic = ethic_egalitarian
+						has_ethic = ethic_fanatic_egalitarian
+					}
+				}
+			}
+		}
+		owner = {
+			has_technology = "ig_tech_government"
+		}
+		}
+	}
+	
+	allow = {
+		custom_tooltip = {
+			fail_text = "requires_any_empire_capital"
+			planet = {
+				NOR = {
+					has_building = "building_capital_1"
+					has_building = "building_capital_2"
+				}		
+			}
+		}
+	}
+	
+	destroy_if = {
+		OR = {
+			planet = {
+				is_capital = no
+			}
+		}
+	}
+	
+	on_queued = {
+		planet = {
+			owner = {
+				if = {
+					limit = {
+						check_variable = {
+							which = gms_government_built
+							value < 1
+						}
+					}
+					set_variable = {
+						which = gms_government_built
+						value = 1
+					}
+					
+					else = {
+						change_variable = {
+							which = gms_government_built
+							value = 1
+						}
+					}
+				}
+				set_country_flag = gms_on_tick_disabled
+			}
+		}
+	}
+	
+	on_unqueued = {
+		planet = {
+			owner = {
+				change_variable = {
+					which = gms_government_built
+					value = -1
+				}
+			}
+		}
+	}
+	
+	upgrades = {
+		"building_gms_f_egalitarian"
+	}
+	
+	produced_resources = {
+		influence = 0.5
+		unity = 5
+	}
+	
+	country_modifier = {
+		country_core_sector_system_cap = 1
+		country_government_civic_points_add = 1
+		pop_government_ethic_attraction = 0.1
+		pop_happiness = 0.1
+		pop_consumer_goods_mult = -0.25
+	}
+}
+
+building_gms_f_egalitarian = {
+	is_listed = no
+	base_buildtime = 2400
+	empire_unique = yes
+	
+	cost = {
+		minerals = 5000
+		influence = 250
+	}
+	
+	potential = {
+	AND = {
+		planet = {
+			AND = {
+				is_capital = yes
+				#Ethic
+				owner = {
+					has_ethic = ethic_fanatic_egalitarian
+				}
+			}
+		}
+		owner = {
+			has_technology = "ig_tech_government"
+		}
+		}
+	}
+	
+	allow = {
+		custom_tooltip = {
+			fail_text = "requires_any_empire_capital"
+			planet = {
+				NOR = {
+					has_building = "building_capital_1"
+					has_building = "building_capital_2"
+				}		
+			}
+		}
+	}
+	
+	destroy_if = {
+		OR = {
+			planet = {
+				is_capital = no
+			}
+		}
+	}
+	
+	on_queued = {
+		planet = {
+			owner = {
+				if = {
+					limit = {
+						check_variable = {
+							which = gms_government_built
+							value < 1
+						}
+					}
+					set_variable = {
+						which = gms_government_built
+						value = 1
+					}
+					
+					else = {
+						change_variable = {
+							which = gms_government_built
+							value = 1
+						}
+					}
+				}
+				set_country_flag = gms_on_tick_disabled
+			}
+		}
+	}
+	
+	on_unqueued = {
+		planet = {
+			owner = {
+				change_variable = {
+					which = gms_government_built
+					value = -1
+				}
+			}
+		}
+	}
+	
+	produced_resources = {
+		influence = 0.5
+		unity = 7
+	}
+	
+	country_modifier = {
+		country_core_sector_system_cap = 2
+		country_government_civic_points_add = 1
+		pop_government_ethic_attraction = 0.15
+		pop_happiness = 0.15
+		pop_consumer_goods_mult = -0.35
+	}
+}

@@ -1,0 +1,28 @@
+ig_tech_planetary_drill = {
+	area = engineering
+	cost = 4500
+	tier = 4
+	is_rare = yes
+	category = {industry}
+	levels = 1
+	prerequisites = {"tech_mega_engineering" "tech_mining_network_4"}
+	weight = 10
+	
+	weight_modifier = {
+		factor = 1.0
+	}
+	
+	ai_weight = {
+		factor = 1.0
+	}
+}
+
+#ig_tech_gms_defenses = {
+#	area = engineering
+#	cost = 2500
+#	tier = 3
+#	category = {}
+#	levels = 1
+#	prerequisites = { "tech_planetary_shield_generator" }
+#	weight = 40
+#}

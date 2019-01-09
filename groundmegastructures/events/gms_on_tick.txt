@@ -1,0 +1,501 @@
+namespace = gms_onTick
+
+#It isn´t possible to build two government seats (this event is just for safety to prevent bugs, however it shouldn´t be possible to build a second government building even without the event)
+country_event = {
+	id = gms_onTick.1
+	title = "First onTick"
+	hide_window = yes
+	
+	immediate = {
+		IF = {
+			limit = {
+				any_planet_within_border = {
+						OR = {
+							has_building = building_gms_xenophob
+							has_building = building_gms_f_xenophob
+							has_building = building_gms_xenophil
+							has_building = building_gms_f_xenophil
+							has_building = building_gms_militarist
+							has_building = building_gms_f_militarist
+							has_building = building_gms_pacifist
+							has_building = building_gms_f_pacifist
+							has_building = building_gms_spiritualist
+							has_building = building_gms_f_spiritualist
+							has_building = building_gms_materialist
+							has_building = building_gms_f_materialist
+							has_building = building_gms_authoritarian
+							has_building = building_gms_f_authoritarian
+							has_building = building_gms_egalitarian
+							has_building = building_gms_f_egalitarian
+						}
+				}
+			}
+			set_variable = {
+				which = gms_government_built
+				value = 1
+			}
+			remove_country_flag = gms_on_tick_disabled
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+}
+
+#Prevent Bugs with government buildings when switching ethics or government building is destroyed another way
+planet_event = {
+	id = gms_onTick.2
+	hide_window = yes
+	
+	trigger = {
+		AND = {
+			is_capital = yes
+			NOR = {
+				has_building = building_gms_xenophob
+				has_building = building_gms_f_xenophob
+				has_building = building_gms_xenophil
+				has_building = building_gms_f_xenophil
+				has_building = building_gms_militarist
+				has_building = building_gms_f_militarist
+				has_building = building_gms_pacifist
+				has_building = building_gms_f_pacifist
+				has_building = building_gms_spiritualist
+				has_building = building_gms_f_spiritualist
+				has_building = building_gms_materialist
+				has_building = building_gms_f_materialist
+				has_building = building_gms_authoritarian
+				has_building = building_gms_f_authoritarian
+				has_building = building_gms_egalitarian
+				has_building = building_gms_f_egalitarian
+			}
+		}
+	}
+	
+	immediate = {
+		owner = {
+			IF = {
+				limit = {
+					NOT = { has_country_flag = gms_on_tick_disabled }
+				}
+				set_variable = {
+					which = gms_government_built
+					value = 0
+				}
+			}
+		}
+		
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+}
+
+#check if the ethic has been changed the first time 
+planet_event = {
+	id = gms_onTick.3
+	hide_window = yes
+	
+	trigger = {
+		is_capital = yes
+	}
+	
+	immediate = {
+		every_tile = {
+			IF = {
+				limit = {
+					AND = {
+						has_building = building_gms_xenophob
+						owner = { 
+							NOR = {
+								has_ethic = ethic_xenophobe
+								has_ethic = ethic_fanatic_xenophobe
+							}
+						}
+					}
+				}
+				planet = {planet_event = { id = gms_onTick.4 days = 5}}
+			}
+			IF = {
+				limit = {
+					AND = {
+						has_building = building_gms_f_xenophob
+						owner = { NOT = {has_ethic = ethic_fanatic_xenophobe}}
+					}
+				}
+				planet = {planet_event = { id = gms_onTick.4 days = 5}}
+			}
+			IF = {
+				limit = {
+					AND = {
+						has_building = building_gms_xenophil
+						owner = { 
+							NOR = {
+								has_ethic = ethic_xenophile
+								has_ethic = ethic_fanatic_xenophile
+							}
+						}
+					}
+				}
+				planet = {planet_event = { id = gms_onTick.4 days = 5}}
+			}
+			IF = {
+				limit = {
+					AND = {
+						has_building = building_gms_f_xenophil
+						owner = { NOT = {has_ethic = ethic_fanatic_xenophile}}
+					}
+				}
+				planet = {planet_event = { id = gms_onTick.4 days = 5}}
+			}
+			IF = {
+				limit = {
+					AND = {
+						has_building = building_gms_militarist
+						owner = { 
+							NOR = {
+								has_ethic = ethic_militarist
+								has_ethic = ethic_fanatic_militarist
+							}
+						}
+					}
+				}
+				planet = {planet_event = { id = gms_onTick.4 days = 5}}
+			}
+			IF = {
+				limit = {
+					AND = {
+						has_building = building_gms_f_militarist
+						owner = { NOT = {has_ethic = ethic_fanatic_militarist}}
+					}
+				}
+				planet = {planet_event = { id = gms_onTick.4 days = 5}}
+			}
+			IF = {
+				limit = {
+					AND = {
+						has_building = building_gms_pacifist
+						owner = { 
+							NOR = {
+								has_ethic = ethic_pacifist
+								has_ethic = ethic_fanatic_pacifist
+							}
+						}
+					}
+				}
+				planet = {planet_event = { id = gms_onTick.4 days = 5}}
+			}
+			IF = {
+				limit = {
+					AND = {
+						has_building = building_gms_f_pacifist
+						owner = { NOT = {has_ethic = ethic_fanatic_pacifist}}
+					}
+				}
+				planet = {planet_event = { id = gms_onTick.4 days = 5}}
+			}
+			IF = {
+				limit = {
+					AND = {
+						has_building = building_gms_spiritualist
+						owner = { 
+							NOR = {
+								has_ethic = ethic_spiritualist
+								has_ethic = ethic_fanatic_spiritualist
+							}
+						}
+					}
+				}
+				planet = {planet_event = { id = gms_onTick.4 days = 5}}
+			}
+			IF = {
+				limit = {
+					AND = {
+						has_building = building_gms_f_spiritualist
+						owner = { NOT = {has_ethic = ethic_fanatic_spiritualist}}
+					}
+				}
+				planet = {planet_event = { id = gms_onTick.4 days = 5}}
+			}
+			IF = {
+				limit = {
+					AND = {
+						has_building = building_gms_materialist
+						owner = { 
+							NOR = {
+								has_ethic = ethic_materialist
+								has_ethic = ethic_fanatic_materialist
+							}
+						}
+					}
+				}
+				planet = {planet_event = { id = gms_onTick.4 days = 5}}
+			}
+			IF = {
+				limit = {
+					AND = {
+						has_building = building_gms_f_materialist
+						owner = { NOT = {has_ethic = ethic_fanatic_materialist}}
+					}
+				}
+				planet = {planet_event = { id = gms_onTick.4 days = 5}}
+			}
+			IF = {
+				limit = {
+					AND = {
+						has_building = building_gms_authoritarian
+						owner = { 
+							NOR = {
+								has_ethic = ethic_authoritarian
+								has_ethic = ethic_fanatic_authoritarian
+							}
+						}
+					}
+				}
+				planet = {planet_event = { id = gms_onTick.4 days = 5}}
+			}
+			IF = {
+				limit = {
+					AND = {
+						has_building = building_gms_f_authoritarian
+						owner = { NOT = {has_ethic = ethic_fanatic_authoritarian}}
+					}
+				}
+				planet = {planet_event = { id = gms_onTick.4 days = 5}}
+			}
+			IF = {
+				limit = {
+					AND = {
+						has_building = building_gms_egalitarian
+						owner = { 
+							NOR	= {
+								has_ethic = ethic_egalitarian
+								has_ethic = ethic_fanatic_egalitarian
+							}
+						}
+					}
+				}
+				planet = {planet_event = { id = gms_onTick.4 days = 5}}
+			}
+			IF = {
+				limit = {
+					AND = {
+						has_building = building_gms_f_egalitarian
+						owner = { NOT = {has_ethic = ethic_fanatic_egalitarian}}
+					}
+				}
+				planet = {planet_event = { id = gms_onTick.4 days = 5}}
+			}
+		}
+	}
+}
+
+
+planet_event = {
+	id = gms_onTick.4
+	hide_window = yes
+	
+	trigger = {
+		is_capital = yes
+	}
+	
+	immediate = {
+		owner = {
+			set_variable = {
+				which = gms_government_built
+				value = 0
+			}
+		}
+		every_tile = {
+			IF = {
+				limit = {
+					AND = {
+						has_building = building_gms_xenophob
+						owner = { 
+							NOR = {
+								has_ethic = ethic_xenophobe
+								has_ethic = ethic_fanatic_xenophobe
+							}
+						}
+					}
+				}
+				remove_building = yes
+			}
+			IF = {
+				limit = {
+					AND = {
+						has_building = building_gms_f_xenophob
+						owner = { NOT = {has_ethic = ethic_fanatic_xenophobe}}
+					}
+				}
+				remove_building = yes
+			}
+			IF = {
+				limit = {
+					AND = {
+						has_building = building_gms_xenophil
+						owner = { 
+							NOR = {
+								has_ethic = ethic_xenophile
+								has_ethic = ethic_fanatic_xenophile
+							}
+						}
+					}
+				}
+				remove_building = yes
+			}
+			IF = {
+				limit = {
+					AND = {
+						has_building = building_gms_f_xenophil
+						owner = { NOT = {has_ethic = ethic_fanatic_xenophile}}
+					}
+				}
+				remove_building = yes
+			}
+			IF = {
+				limit = {
+					AND = {
+						has_building = building_gms_militarist
+						owner = { 
+							NOR = {
+								has_ethic = ethic_militarist
+								has_ethic = ethic_fanatic_militarist
+							}
+						}
+					}
+				}
+				remove_building = yes
+			}
+			IF = {
+				limit = {
+					AND = {
+						has_building = building_gms_f_militarist
+						owner = { NOT = {has_ethic = ethic_fanatic_militarist}}
+					}
+				}
+				remove_building = yes
+			}
+			IF = {
+				limit = {
+					AND = {
+						has_building = building_gms_pacifist
+						owner = { 
+							NOR = {
+								has_ethic = ethic_pacifist
+								has_ethic = ethic_fanatic_pacifist
+							}
+						}
+					}
+				}
+				remove_building = yes
+			}
+			IF = {
+				limit = {
+					AND = {
+						has_building = building_gms_f_pacifist
+						owner = { NOT = {has_ethic = ethic_fanatic_pacifist}}
+					}
+				}
+				remove_building = yes
+			}
+			IF = {
+				limit = {
+					AND = {
+						has_building = building_gms_spiritualist
+						owner = { 
+							NOR = {
+								has_ethic = ethic_spiritualist
+								has_ethic = ethic_fanatic_spiritualist
+							}
+						}
+					}
+				}
+				remove_building = yes
+			}
+			IF = {
+				limit = {
+					AND = {
+						has_building = building_gms_f_spiritualist
+						owner = { NOT = {has_ethic = ethic_fanatic_spiritualist}}
+					}
+				}
+				remove_building = yes
+			}
+			IF = {
+				limit = {
+					AND = {
+						has_building = building_gms_materialist
+						owner = { 
+							NOR = {
+								has_ethic = ethic_materialist
+								has_ethic = ethic_fanatic_materialist
+							}
+						}
+					}
+				}
+				remove_building = yes
+			}
+			IF = {
+				limit = {
+					AND = {
+						has_building = building_gms_f_materialist
+						owner = { NOT = {has_ethic = ethic_fanatic_materialist}}
+					}
+				}
+				remove_building = yes
+			}
+			IF = {
+				limit = {
+					AND = {
+						has_building = building_gms_authoritarian
+						owner = { 
+							NOR = {
+								has_ethic = ethic_authoritarian
+								has_ethic = ethic_fanatic_authoritarian
+							}
+						}
+					}
+				}
+				remove_building = yes
+			}
+			IF = {
+				limit = {
+					AND = {
+						has_building = building_gms_f_authoritarian
+						owner = { NOT = {has_ethic = ethic_fanatic_authoritarian}}
+					}
+				}
+				remove_building = yes
+			}
+			IF = {
+				limit = {
+					AND = {
+						has_building = building_gms_egalitarian
+						owner = { 
+							NOR	= {
+								has_ethic = ethic_egalitarian
+								has_ethic = ethic_fanatic_egalitarian
+							}
+						}
+					}
+				}
+				remove_building = yes
+			}
+			IF = {
+				limit = {
+					AND = {
+						has_building = building_gms_f_egalitarian
+						owner = { NOT = {has_ethic = ethic_fanatic_egalitarian}}
+					}
+				}
+				remove_building = yes
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+}

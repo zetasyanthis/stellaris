@@ -1,0 +1,126 @@
+building_portal_3 = {
+	requires_pop = yes
+	base_buildtime = 2400
+	empire_unique = yes
+	is_listed = no
+	
+	cost = {
+		minerals = 10000
+		energy = 2500
+	}
+	
+	produced_resources = {
+		physics_research = 10
+		sr_dark_matter = 1
+	}
+	
+	country_modifier = {
+		category_field_manipulation_research_speed_mult = 0.15
+	}
+	
+	required_resources = {
+		energy = 50
+	}
+	
+	destroy_if = {
+		planet = {is_capital = yes}
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_building_capital_2"
+			planet = {
+				OR = {
+					has_building = "building_capital_2"
+					has_building = "building_capital_3"
+					has_building = "building_commerce_coord"
+					has_building = "building_novus_capital_4"
+					has_building = "building_novus_capital_5"
+					has_building = "building_farming_guild"
+					has_building = "building_machine_capital_2"
+					has_building = "building_machine_capital_3"
+				}		
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requirement_not_homeworld"
+			planet = {
+				is_capital = no
+			}
+		}
+	}
+	
+	prerequisites = {
+		"ig_tech_dark_hole_perfection"
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+building_portal_31 = {
+	requires_pop = yes
+	base_buildtime = 2400
+	empire_unique = yes
+	is_listed = no
+	
+	cost = {
+		minerals = 7500
+		energy = 1500
+	}
+	
+	produced_resources = {
+		physics_research = 32
+		sr_dark_matter = 2
+	}
+	
+	country_modifier = {
+		category_field_manipulation_research_speed_mult = 0.35
+		country_physics_tech_research_speed = 0.1
+	}
+	
+	planet_modifier = {
+		pop_happiness = -0.05
+	}
+	
+	required_resources = {
+		energy = 50
+	}
+	
+	destroy_if = {
+		planet = {is_capital = yes}
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_building_capital_2"
+			planet = {
+				OR = {
+					has_building = "building_capital_2"
+					has_building = "building_capital_3"
+					has_building = "building_commerce_coord"
+					has_building = "building_novus_capital_4"
+					has_building = "building_novus_capital_5"
+					has_building = "building_farming_guild"
+					has_building = "building_machine_capital_2"
+					has_building = "building_machine_capital_3"
+				}		
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requirement_not_homeworld"
+			planet = {
+				is_capital = no
+			}
+		}
+	}
+	
+	prerequisites = {
+		"ig_tech_dark_hole_3"
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
