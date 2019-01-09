@@ -1,0 +1,430 @@
+namespace = fatalf_anomaly
+
+#Hidden Bunker
+ship_event = {
+	id = fatalf_anomaly.101
+	title = "fatalf_anomaly.101.title"
+	desc = "fatalf_anomaly.101.desc"
+	picture = GFX_evt_junkheap
+	location = from
+	trackable = yes
+	is_triggered_only = yes
+
+	immediate = {
+		from = {
+			orbital_deposit_tile = {clear_deposits = yes}
+			save_event_target_as = bunker_planet
+		}
+	}
+	
+	option = {
+		name = "We should send someone in to explore."
+		enable_special_project = {name = FATALF_BUNKER_STUDY owner = owner location = from}
+	}
+	
+	option = {
+		name = "This is unlikely to be of any use."
+		owner = {
+			add_influence = 50
+		}
+	}
+}
+
+ship_event = {
+	id = fatalf_anomaly.001
+	title = "fatalf_anomaly.001.title"
+	desc = "fatalf_anomaly.001.desc"
+	picture = GFX_evt_junkheap
+	is_triggered_only = yes
+	
+	option = {
+		name = "These machines may be important, try to disarm it."
+		hidden_effect = {
+			fleet = {set_event_locked = yes}
+			if = {
+				limit = {
+					leader = {
+						has_skill <= 2
+					}
+				}
+				random_list = {
+					75 = {ship_event = {id = fatalf_anomaly.003 days = 5}}
+					25 = {ship_event = {id = fatalf_anomaly.002 days = 5}}
+				}
+			}
+			else_if = {
+				limit = {
+					leader = {
+						has_skill > 2
+						has_skill <= 5
+					}
+				}
+				random_list = {
+					35 = {ship_event = {id = fatalf_anomaly.003 days = 5}}
+					65 = {ship_event = {id = fatalf_anomaly.002 days = 5}}
+				}
+			}
+			else = {
+				random_list = {
+					15	= {ship_event = {id = fatalf_anomaly.003 days = 5}}
+					85 = {ship_event = {id = fatalf_anomaly.002 days = 5}}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "It is far too dangerous, get out of there now!"
+		hidden_effect = {
+			ship_event = {id = fatalf_anomaly.004 days = 5}
+		}
+	}
+}
+
+ship_event = {
+	id = fatalf_anomaly.002
+	title = "fatalf_anomaly.002.title"
+	desc = "fatalf_anomaly.002.desc"
+	picture = GFX_evt_junkheap
+	is_triggered_only = yes
+	
+	option = {
+		name = "Excellent, let us study these machines."
+		leader = {
+			add_skill = 250
+		}
+		event_target:bunker_planet = {
+			orbital_deposit_tile = {
+				add_deposit = d_vast_society_deposit
+				add_deposit = d_vast_engineering_deposit
+			}
+		}
+		hidden_effect = {
+			fleet = {set_event_locked = no}
+		}
+	}
+}
+
+ship_event = {
+	id = fatalf_anomaly.003
+	title = "fatalf_anomaly.003.title"
+	desc = "fatalf_anomaly.003.desc"
+	picture = GFX_evt_junkheap
+	is_triggered_only = yes
+	
+	option = {
+		name = "They tried their hardest."
+		kill_leader = {
+			show_notification = yes
+		}
+		destroy_ship = this
+	}
+}
+
+ship_event = {
+	id = fatalf_anomaly.004
+	title = "fatalf_anomaly.004.title"
+	desc = "fatalf_anomaly.004.desc"
+	picture = GFX_evt_junkheap
+	is_triggered_only = yes
+	
+	option = {
+		name = "It was not worth the risk."
+		hidden_effect = {
+			fleet = {set_event_locked = no}
+		}
+	}
+}
+
+#Orbital station
+ship_event = {
+	id = fatalf_anomaly.005
+	title = "fatalf_anomaly.005.title"
+	desc = "fatalf_anomaly.005.desc"
+	picture = GFX_evt_space_station
+	is_triggered_only = yes
+	
+	immediate = {
+		from = {orbital_deposit_tile = {clear_deposits = yes}}
+	}
+
+	option = {
+		name = "Take care, but explore it."
+		hidden_effect = {
+			fleet = {set_event_locked = yes}
+			if = {
+				limit = {
+					leader = {
+						has_skill <= 2
+					}
+				}
+				random_list = {
+					50 = {ship_event = {id = fatalf_anomaly.006 days = 5}}
+					40 = {ship_event = {id = fatalf_anomaly.007 days = 5}}
+					10 = {ship_event = {id = fatalf_anomaly.008 days = 5}}
+				}
+			}
+			else_if = {
+				limit = {
+					leader = {
+						has_skill > 2
+						has_skill <= 5
+					}
+				}
+				random_list = {
+					50 = {ship_event = {id = fatalf_anomaly.006 days = 5}}
+					25 = {ship_event = {id = fatalf_anomaly.007 days = 5}}
+					25 = {ship_event = {id = fatalf_anomaly.008 days = 5}}
+				}
+			}
+			else = {
+				random_list = {
+					50	= {ship_event = {id = fatalf_anomaly.006 days = 5}}
+					5 = {ship_event = {id = fatalf_anomaly.007 days = 5}}
+					45 = {ship_event = {id = fatalf_anomaly.008 days = 5}}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "Let's get out of here, giant alien monsters are no joke!"
+	}
+}
+
+ship_event = {
+	id = fatalf_anomaly.006
+	title = fatalf_anomaly.006.title
+	desc = fatalf_anomaly.006.desc
+	picture = GFX_evt_space_station
+	is_triggered_only = yes
+
+	option = {
+		name = "This could be useful."
+		from.orbital_deposit_tile = {
+			add_deposit = d_enormous1_engineering_deposit
+		}
+		hidden_effect = {
+			fleet = {set_event_locked = no}
+		}
+	}
+}
+
+ship_event = {
+	id = fatalf_anomaly.007
+	title = fatalf_anomaly.007.title
+	desc = fatalf_anomaly.007.desc
+	picture = GFX_evt_space_station
+	is_triggered_only = yes
+
+	option = {
+		name = "A tragic loss."
+		kill_leader = {
+			show_notification = yes
+		}
+		hidden_effect = {
+			fleet = {set_event_locked = no}
+		}
+	}
+}
+
+ship_event = {
+	id = fatalf_anomaly.008
+	title = fatalf_anomaly.008.title
+	desc = fatalf_anomaly.008.desc
+	picture = GFX_evt_space_station
+	is_triggered_only = yes
+
+	option = {
+		name = "Excellent Work."
+		leader = {
+			add_skill = 250
+		}
+		from.orbital_deposit_tile = {
+			add_deposit = d_vast_society_deposit
+			add_deposit = d_enormous1_engineering_deposit
+		}
+		hidden_effect = {
+			fleet = {set_event_locked = no}
+		}
+	}
+}
+
+ship_event = {
+	id = fatalf_anomaly.009
+	title = fatalf_anomaly.009.title
+	desc = fatalf_anomaly.009.desc
+	picture = GFX_evt_asteroid_field
+	is_triggered_only = yes
+
+	immediate = {
+		from.orbital_deposit_tile = {
+			clear_deposits = yes
+		}
+	}
+
+	option = {
+		name = "What could possibly be the point?"
+		from.orbital_deposit_tile = {
+			add_deposit = d_enormous1_engineering_deposit
+		}
+	}
+}
+
+ship_event = {
+	id = fatalf_anomaly.010
+	title = fatalf_anomaly.010.title
+	desc = fatalf_anomaly.010.desc
+	picture = GFX_evt_asteroid_field
+	is_triggered_only = yes
+
+	option = {
+		name = "What could have caused that?"
+		owner = {
+			add_monthly_resource_mult = { 
+				resource = physics_research
+				value = 3 
+				max = 2000 
+				min = 50
+			}
+		}
+	}
+}
+
+ship_event = {
+	id = fatalf_anomaly.011
+	title = fatalf_anomaly.011.title
+	desc = fatalf_anomaly.011.desc
+	picture = GFX_evt_drilling_for_gas
+	is_triggered_only = yes
+
+	immediate = {
+		from.orbital_deposit_tile = {
+			clear_deposits = yes
+		}
+	}
+
+	option = {
+		name = "Try to turn it on."
+		hidden_effect = {
+			solar_system = {save_event_target_as = wormhole_generator_system}
+		}
+		enable_special_project = { 
+			name = fatalf_wormhole_generator_project
+			owner = owner 
+			location = owner.capital_scope
+		}
+	}
+
+	option = {
+		name = "Leave it running as-is."
+		from.orbital_deposit_tile = {
+			add_deposit = d_enormous1_physics_deposit
+		}
+	}
+}
+
+planet_event = {
+	id = fatalf_anomaly.012
+	title = fatalf_anomaly.012.title
+	desc = fatalf_anomaly.012.desc
+	picture = GFX_evt_wormhole
+	is_triggered_only = yes
+
+	immediate = {
+		event_target:wormhole_generator_system = {
+			spawn_natural_wormhole = {
+				bypass_type = wormhole
+				random_pos = yes
+				orbit_angle = 360
+			}
+		}
+		random_system = {
+			limit = {
+				NOR = {
+					has_natural_wormhole = yes
+					starting_system = yes
+					has_star_flag = empire_cluster
+				}
+				distance = {
+					source = event_target:wormhole_generator_system
+					min_distance >= 500
+				}
+			}
+			spawn_natural_wormhole = {
+				bypass_type = wormhole
+				random_pos = yes
+				orbit_angle = 360
+			}
+			link_wormholes = event_target:wormhole_generator_system
+		}
+	}
+
+	option = {
+		name = "A new wormhole, leading across the galaxy!"
+	}
+}
+
+ship_event = {
+	id = fatalf_anomaly.013
+	title = fatalf_anomaly.013.title
+	desc = fatalf_anomaly.013.desc
+	picture = GFX_evt_drilling_for_gas
+	is_triggered_only = yes
+
+	immediate = {
+		from.orbital_deposit_tile = {
+			clear_deposits = yes
+		}
+	}
+
+	option = {
+		name = "A true shame."
+		from.orbital_deposit_tile = {
+			add_deposit = d_vast_physics_deposit
+			add_deposit = d_vast_engineering_deposit
+		}
+	}
+}
+
+ship_event = {
+	id = fatalf_anomaly.014
+	title = fatalf_anomaly.014.title
+	desc = fatalf_anomaly.014.desc
+	picture = GFX_evt_star_yellow
+	is_triggered_only = yes
+
+	immediate = {
+		from.orbital_deposit_tile = {
+			clear_deposits = yes
+		}
+	}
+
+	option = {
+		name = "Sheer coincidence, right?"
+		from.orbital_deposit_tile = {
+			add_deposit = d_vast_physics_deposit
+		}
+	}
+}
+
+ship_event = {
+	id = fatalf_anomaly.015
+	title = fatalf_anomaly.015.title
+	desc = fatalf_anomaly.015.desc
+	picture = GFX_evt_star_yellow
+	is_triggered_only = yes
+
+	immediate = {
+		from.orbital_deposit_tile = {
+			clear_deposits = yes
+		}
+	}
+
+	option = {
+		name = "How have they not been destroyed?"
+		from.orbital_deposit_tile = {
+			add_deposit = d_vast_engineering_deposit
+		}
+	}
+}

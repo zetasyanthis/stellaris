@@ -1,0 +1,95 @@
+namespace = fatalf
+
+#Manager Home
+country_event = {
+    id = fatalf.900
+    title = fatalf.900.title
+    desc = fatalf.900.desc
+    picture = GFX_evt_wormhole
+    is_triggered_only = yes
+
+    option = {
+        name = "Instability: High"
+        hidden_effect = {
+            set_global_flag = fatalf_instability_low
+            remove_global_flag = fatalf_instability_high
+            country_event = {id = fatalf.900}
+        }
+        trigger = {
+            has_global_flag = fatalf_instability_high
+        }
+    }
+
+    option = {
+        name = "Instability: Normal"
+        hidden_effect = {
+            set_global_flag = fatalf_instability_high
+            country_event = {id = fatalf.900}
+        }
+        trigger = {
+            NOR = {
+                has_global_flag = fatalf_instability_high
+                has_global_flag = fatalf_instability_low
+            }
+        }
+    }
+
+    option = {
+        name = "Instability: Low"
+        hidden_effect = {
+            remove_global_flag = fatalf_instability_low
+            country_event = {id = fatalf.900}
+        }
+        trigger = {
+            has_global_flag = fatalf_instability_low
+        }
+    }
+
+    option = {
+        name = "Overgrowth Crisis: Random"
+        hidden_effect = {
+            set_global_flag = fatalf_overgrowth_disabled
+            country_event = {id = fatalf.900}
+        }
+        trigger = {
+            NOT = {has_global_flag = fatalf_overgrowth_disabled}
+        }
+    }
+
+    option = {
+        name = "Overgrowth Crisis: Disabled"
+        hidden_effect = {
+            remove_global_flag = fatalf_overgrowth_disabled
+            country_event = {id = fatalf.900}
+        }
+        trigger = {
+            has_global_flag = fatalf_overgrowth_disabled
+        }
+    }
+
+    option = {
+        name = "L-Gate Disturbance: Active - Random"
+        hidden_effect = {
+            set_global_flag = fatalf_hyperlane_disabled
+            country_event = {id = fatalf.900}
+        }
+        trigger = {
+            NOT = {has_global_flag = fatalf_hyperlane_disabled}
+        }
+    }
+
+    option = {
+        name = "L-Gate Disturbance: Disabled"
+        hidden_effect = {
+            remove_global_flag = fatalf_hyperlane_disabled
+            country_event = {id = fatalf.900}
+        }
+        trigger = {
+            has_global_flag = fatalf_hyperlane_disabled
+        }
+    }
+
+    option = {
+        name = "Close Window"
+    }
+}
