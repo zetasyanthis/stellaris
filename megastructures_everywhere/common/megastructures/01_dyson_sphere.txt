@@ -27,10 +27,6 @@ dyson_sphere_0 = {
 			is_inside_border = from
 		}
 		custom_tooltip = {
-			fail_text = "requires_no_existing_dyson_sphere"
-			from = { NOT = { has_country_flag = built_dyson_sphere } }
-		}
-		custom_tooltip = {
 			fail_text = "requires_surveyed_system"
 			NOT = {
 				any_planet = {
