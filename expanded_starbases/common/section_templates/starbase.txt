@@ -1,0 +1,1136 @@
+ship_section_template = {
+	key = "OUTPOST_STARBASE_SECTION"
+	ship_size = starbase_outpost
+
+	fits_on_slot = "core"
+	entity = "starbase_outpost_section_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = {
+		name = "SMALL_GUN_01"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_01"
+		section_instance = 0
+	}
+	
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		slot_size = torpedo
+		slot_type = weapon
+		locatorname = "medium_gun_01"
+	}
+	
+	component_slot = {
+		name = "MEDIUM_GUN_02"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_02"
+	}
+
+	small_utility_slots = 0
+	medium_utility_slots = 0
+	large_utility_slots = 4
+	aux_utility_slots = 1
+}
+
+ship_section_template = {
+	key = "STARPORT_STARBASE_SECTION"
+	ship_size = starbase_starport
+
+	fits_on_slot = "core"
+	entity = "starbase_starport_section_entity"
+	icon = "GFX_ship_part_core_mid"
+		
+	component_slot = {
+		name = "SMALL_GUN_01"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_01"
+		section_instance = 0
+	}
+		
+	component_slot = {
+		name = "SMALL_GUN_02"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_02"
+		section_instance = 0
+	}
+	
+	component_slot = {
+		name = "STRIKE_CRAFT_01"
+		slot_size = large
+		slot_type = strike_craft
+		rotation = 90
+		locatorname = "strike_craft_locator_01"
+	}
+
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		slot_size = torpedo
+		slot_type = weapon
+		locatorname = "medium_gun_01"
+	}
+
+	component_slot = {
+		name = "MEDIUM_GUN_02"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_02"
+	}
+	
+	component_slot = {
+		name = "MEDIUM_GUN_03"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_03"
+	}
+	
+	component_slot = {
+		name = "MEDIUM_GUN_04"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_04"
+	}
+
+	small_utility_slots = 0
+	medium_utility_slots = 0
+	large_utility_slots = 8
+	aux_utility_slots = 1
+}
+
+ship_section_template = {
+	key = "STARHOLD_STARBASE_SECTION"
+	ship_size = starbase_starhold
+
+	fits_on_slot = "core"
+	entity = "starbase_starhold_section_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = {
+		name = "SMALL_GUN_01"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_01"
+		section_instance = 0
+	}
+		
+	component_slot = {
+		name = "SMALL_GUN_02"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_02"
+		section_instance = 0
+	}
+	
+	component_slot = {
+		name = "SMALL_GUN_03"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_03"
+		section_instance = 0
+	}
+		
+	component_slot = {
+		name = "SMALL_GUN_04"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_04"
+		section_instance = 0
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_01"
+		slot_size = large
+		slot_type = strike_craft
+		rotation = 90
+		locatorname = "strike_craft_locator_01"
+	}
+	
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		slot_size = torpedo
+		slot_type = weapon
+		locatorname = "medium_gun_01"
+	}
+
+	component_slot = {
+		name = "MEDIUM_GUN_02"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_02"
+	}
+
+	component_slot = {
+		name = "MEDIUM_GUN_03"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_03"
+	}
+
+	component_slot = {
+		name = "MEDIUM_GUN_04"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_04"
+	}
+	
+	component_slot = {
+		name = "MEDIUM_GUN_05"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_05"
+	}
+	
+	component_slot = {
+		name = "MEDIUM_GUN_06"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_06"
+	}
+	
+	component_slot = {
+		name = "MEDIUM_GUN_07"
+		slot_size = torpedo
+		slot_type = weapon
+		locatorname = "medium_gun_07"
+	}
+	
+	component_slot = {
+		name = "LARGE_GUN_01"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "large_gun_01"
+		section_instance = 0
+	}
+
+	small_utility_slots = 0
+	medium_utility_slots = 0
+	large_utility_slots = 12
+	aux_utility_slots = 1
+}
+
+ship_section_template = {
+	key = "STARFORTRESS_STARBASE_SECTION"
+	ship_size = starbase_starfortress
+
+	fits_on_slot = "core"
+	entity = "starbase_starfortress_section_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = {
+		name = "SMALL_GUN_01"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_01"
+		section_instance = 0
+	}
+		
+	component_slot = {
+		name = "SMALL_GUN_02"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_02"
+		section_instance = 0
+	}
+	
+	component_slot = {
+		name = "SMALL_GUN_03"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_03"
+		section_instance = 0
+	}
+		
+	component_slot = {
+		name = "SMALL_GUN_04"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_04"
+		section_instance = 0
+	}
+	
+	component_slot = {
+		name = "SMALL_GUN_05"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_05"
+		section_instance = 0
+	}
+		
+	component_slot = {
+		name = "SMALL_GUN_06"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_06"
+		section_instance = 0
+	}
+	
+	component_slot = {
+		name = "STRIKE_CRAFT_01"
+		slot_size = large
+		slot_type = strike_craft
+		rotation = 90
+		locatorname = "strike_craft_locator_01"
+	}
+
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		slot_size = torpedo
+		slot_type = weapon
+		locatorname = "medium_gun_01"
+	}
+
+	component_slot = {
+		name = "MEDIUM_GUN_02"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_02"
+	}
+
+	component_slot = {
+		name = "MEDIUM_GUN_03"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_03"
+	}
+
+	component_slot = {
+		name = "MEDIUM_GUN_04"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_04"
+	}
+
+	component_slot = {
+		name = "MEDIUM_GUN_05"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_05"
+	}
+
+	component_slot = {
+		name = "MEDIUM_GUN_06"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_06"
+	}
+	
+	component_slot = {
+		name = "MEDIUM_GUN_07"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_07"
+	}
+	
+	component_slot = {
+		name = "MEDIUM_GUN_08"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_08"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_09"
+		slot_size = torpedo
+		slot_type = weapon
+		locatorname = "medium_gun_09"
+	}
+	
+	component_slot = {
+		name = "LARGE_GUN_01"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "large_gun_01"
+		section_instance = 0
+	}
+	
+	small_utility_slots = 0
+	medium_utility_slots = 0
+	large_utility_slots = 16
+	aux_utility_slots = 2
+}
+
+ship_section_template = {
+	key = "CITADEL_STARBASE_SECTION"
+	ship_size = starbase_citadel
+
+	fits_on_slot = "core"
+	entity = "starbase_citadel_section_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = {
+		name = "SMALL_GUN_01"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_01"
+		section_instance = 0
+	}
+		
+	component_slot = {
+		name = "SMALL_GUN_02"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_02"
+		section_instance = 0
+	}
+	
+	component_slot = {
+		name = "SMALL_GUN_03"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_03"
+		section_instance = 0
+	}
+		
+	component_slot = {
+		name = "SMALL_GUN_04"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_04"
+		section_instance = 0
+	}
+	
+	component_slot = {
+		name = "SMALL_GUN_05"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_05"
+		section_instance = 0
+	}
+		
+	component_slot = {
+		name = "SMALL_GUN_06"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_06"
+		section_instance = 0
+	}
+	
+	component_slot = {
+		name = "SMALL_GUN_07"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_07"
+		section_instance = 0
+	}
+		
+	component_slot = {
+		name = "SMALL_GUN_08"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_08"
+		section_instance = 0
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_01"
+		slot_size = large
+		slot_type = strike_craft
+		rotation = 90
+		locatorname = "strike_craft_locator_01"
+	}
+	
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		slot_size = torpedo
+		slot_type = weapon
+		locatorname = "medium_gun_01"
+	}
+
+	component_slot = {
+		name = "MEDIUM_GUN_02"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_02"
+	}
+
+	component_slot = {
+		name = "MEDIUM_GUN_03"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_03"
+	}
+
+	component_slot = {
+		name = "MEDIUM_GUN_04"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_04"
+	}
+
+	component_slot = {
+		name = "MEDIUM_GUN_05"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_05"
+	}
+
+	component_slot = {
+		name = "MEDIUM_GUN_06"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_06"
+	}
+	
+	component_slot = {
+		name = "MEDIUM_GUN_07"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_07"
+	}
+	
+	component_slot = {
+		name = "MEDIUM_GUN_08"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_08"
+	}
+	
+	component_slot = {
+		name = "MEDIUM_GUN_09"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_09"
+	}
+	
+	component_slot = {
+		name = "MEDIUM_GUN_010"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_010"
+	}
+	
+	component_slot = {
+		name = "MEDIUM_GUN_011"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_011"
+	}
+	
+	component_slot = {
+		name = "MEDIUM_GUN_012"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_012"
+	}
+	
+	component_slot = {
+		name = "MEDIUM_GUN_013"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_013"
+	}
+	
+	component_slot = {
+		name = "MEDIUM_GUN_014"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_014"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_15"
+		slot_size = torpedo
+		slot_type = weapon
+		locatorname = "medium_gun_15"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_16"
+		slot_size = torpedo
+		slot_type = weapon
+		locatorname = "medium_gun_16"
+	}
+	
+	component_slot = {
+		name = "LARGE_GUN_01"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "large_gun_01"
+		section_instance = 0
+	}
+	component_slot = {
+		name = "LARGE_GUN_02"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "large_gun_02"
+		section_instance = 0
+	}
+	
+	component_slot = {
+		name = "EXTRA_LARGE_01"
+		slot_size = extra_large
+		slot_type = weapon
+		locatorname = "xl_gun_01"
+	}
+
+	small_utility_slots = 0
+	medium_utility_slots = 0
+	large_utility_slots = 28
+	aux_utility_slots = 2
+}
+
+ship_section_template = {
+	key = "BASTION_STARBASE_SECTION"
+	ship_size = starbase_bastion
+
+	fits_on_slot = "core"
+	entity = "starbase_citadel_section_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = {
+		name = "SMALL_GUN_01"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_01"
+		section_instance = 0
+	}
+		
+	component_slot = {
+		name = "SMALL_GUN_02"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_02"
+		section_instance = 0
+	}
+	
+	component_slot = {
+		name = "SMALL_GUN_03"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_03"
+		section_instance = 0
+	}
+		
+	component_slot = {
+		name = "SMALL_GUN_04"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_04"
+		section_instance = 0
+	}
+	
+	component_slot = {
+		name = "SMALL_GUN_05"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_05"
+		section_instance = 0
+	}
+		
+	component_slot = {
+		name = "SMALL_GUN_06"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_06"
+		section_instance = 0
+	}
+	
+	component_slot = {
+		name = "SMALL_GUN_07"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_07"
+		section_instance = 0
+	}
+		
+	component_slot = {
+		name = "SMALL_GUN_08"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_08"
+		section_instance = 0
+	}
+	
+	component_slot = {
+		name = "SMALL_GUN_09"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_09"
+		section_instance = 0
+	}
+	
+	component_slot = {
+		name = "SMALL_GUN_10"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_10"
+		section_instance = 0
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_01"
+		slot_size = large
+		slot_type = strike_craft
+		rotation = 90
+		locatorname = "strike_craft_locator_01"
+	}
+	component_slot = {
+		name = "STRIKE_CRAFT_02"
+		slot_size = large
+		slot_type = strike_craft
+		rotation = 90
+		locatorname = "strike_craft_locator_02"
+	}
+	
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		slot_size = torpedo
+		slot_type = weapon
+		locatorname = "medium_gun_01"
+	}
+
+	component_slot = {
+		name = "MEDIUM_GUN_02"
+		slot_size = torpedo
+		slot_type = weapon
+		locatorname = "medium_gun_02"
+	}
+
+	component_slot = {
+		name = "MEDIUM_GUN_03"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_03"
+	}
+
+	component_slot = {
+		name = "MEDIUM_GUN_04"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_04"
+	}
+
+	component_slot = {
+		name = "MEDIUM_GUN_05"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_05"
+	}
+
+	component_slot = {
+		name = "MEDIUM_GUN_06"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_06"
+	}
+	
+	component_slot = {
+		name = "MEDIUM_GUN_07"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_07"
+	}
+	
+	component_slot = {
+		name = "MEDIUM_GUN_08"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_08"
+	}
+	
+	component_slot = {
+		name = "MEDIUM_GUN_09"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_09"
+	}
+	
+	component_slot = {
+		name = "MEDIUM_GUN_010"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_010"
+	}
+	
+	component_slot = {
+		name = "MEDIUM_GUN_011"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_011"
+	}
+	
+	component_slot = {
+		name = "MEDIUM_GUN_012"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_012"
+	}
+	
+	component_slot = {
+		name = "MEDIUM_GUN_013"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_013"
+	}
+	
+	component_slot = {
+		name = "MEDIUM_GUN_014"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_014"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_15"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_15"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_16"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_16"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_17"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_17"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_18"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_18"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_19"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_19"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_20"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_20"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_21"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_21"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_22"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_22"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_23"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_23"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_24"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_24"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_25"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_25"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_26"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_26"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_27"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_27"
+	}
+	
+	component_slot = {
+		name = "LARGE_GUN_01"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "large_gun_01"
+		section_instance = 0
+	}
+	component_slot = {
+		name = "LARGE_GUN_02"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "large_gun_02"
+		section_instance = 0
+	}
+	component_slot = {
+		name = "LARGE_GUN_03"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "large_gun_03"
+		section_instance = 0
+	}
+	component_slot = {
+		name = "LARGE_GUN_04"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "large_gun_04"
+		section_instance = 0
+	}
+	
+	component_slot = {
+		name = "EXTRA_LARGE_01"
+		slot_size = extra_large
+		slot_type = weapon
+		locatorname = "xl_gun_01"
+	}
+	component_slot = {
+		name = "EXTRA_LARGE_02"
+		slot_size = extra_large
+		slot_type = weapon
+		locatorname = "xl_gun_02"
+	}
+	
+	component_slot = {
+		name = "TITANIC_GUN_01"
+		slot_size = titanic
+		slot_type = weapon
+		locatorname = "xl_gun_03"
+	}
+
+	small_utility_slots = 0
+	medium_utility_slots = 0
+	large_utility_slots = 50
+	aux_utility_slots = 3
+}
+
+ship_section_template = {
+	key = "SHIPYARD_STARBASE_SECTION"
+	entity = "orbital_station_assemblyyard_section_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	ship_size = starbase_outpost
+	ship_size = starbase_starport
+	ship_size = starbase_starhold
+	ship_size = starbase_starfortress
+	ship_size = starbase_citadel
+	ship_size = starbase_bastion
+
+	fits_on_slot = "1"
+	fits_on_slot = "2"
+	fits_on_slot = "3"
+	fits_on_slot = "4"
+	fits_on_slot = "5"
+	fits_on_slot = "6"
+}
+
+ship_section_template = {
+	key = "BATTERY_STARBASE_SECTION"
+	entity = "starbase_turret_section_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	ship_size = starbase_outpost
+	ship_size = starbase_starport
+	ship_size = starbase_starhold
+	ship_size = starbase_starfortress
+	ship_size = starbase_citadel
+	ship_size = starbase_bastion
+
+	fits_on_slot = "1"
+	fits_on_slot = "2"
+	fits_on_slot = "3"
+	fits_on_slot = "4"
+	fits_on_slot = "5"
+	fits_on_slot = "6"
+		
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_01"
+	}
+
+	component_slot = {
+		name = "MEDIUM_GUN_02"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_02"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_03"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_03"
+	}
+}
+
+ship_section_template = {
+	key = "MISSILE_STARBASE_SECTION"
+	entity = "starbase_turret_section_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	ship_size = starbase_outpost
+	ship_size = starbase_starport
+	ship_size = starbase_starhold
+	ship_size = starbase_starfortress
+	ship_size = starbase_citadel
+	ship_size = starbase_bastion
+
+	fits_on_slot = "1"
+	fits_on_slot = "2"
+	fits_on_slot = "3"
+	fits_on_slot = "4"
+	fits_on_slot = "5"
+	fits_on_slot = "6"
+		
+	component_slot = {
+		name = "TORPEDO_01"
+		slot_size = torpedo
+		slot_type = weapon
+		locatorname = "medium_gun_01"
+	}
+
+	component_slot = {
+		name = "TORPEDO_02"
+		slot_size = torpedo
+		slot_type = weapon
+		locatorname = "medium_gun_02"
+	}
+	component_slot = {
+		name = "TORPEDO_02"
+		slot_size = torpedo
+		slot_type = weapon
+		locatorname = "medium_gun_03"
+	}
+}
+
+ship_section_template = {
+	key = "HANGAR_STARBASE_SECTION"
+	entity = "orbital_station_hangarbay_section_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	ship_size = starbase_outpost
+	ship_size = starbase_starport
+	ship_size = starbase_starhold
+	ship_size = starbase_starfortress
+	ship_size = starbase_citadel
+	ship_size = starbase_bastion
+		
+	fits_on_slot = "1"
+	fits_on_slot = "2"
+	fits_on_slot = "3"
+	fits_on_slot = "4"
+	fits_on_slot = "5"
+	fits_on_slot = "6"
+		
+	component_slot = {
+		name = "STRIKE_CRAFT_01"
+		slot_size = large
+		slot_type = strike_craft
+		rotation = 90
+		locatorname = "strike_craft_locator_01"
+	}
+	component_slot = {
+		name = "STRIKE_CRAFT_02"
+		slot_size = large
+		slot_type = strike_craft
+		rotation = 90
+		locatorname = "strike_craft_locator_02"
+	}
+	component_slot = {
+		name = "SMALL_GUN_01"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_01"
+		section_instance = 0
+	}
+}
+
+ship_section_template = {
+	key = "ASSEMBLYYARD_STARBASE_SECTION"
+
+	ship_size = starbase_outpost
+	ship_size = starbase_starport
+	ship_size = starbase_starhold
+	ship_size = starbase_starfortress
+	ship_size = starbase_citadel
+	ship_size = starbase_bastion	
+	
+	entity = "orbital_station_assemblyyard_section_entity"
+	icon = "GFX_ship_part_core_mid"
+	fits_on_slot = "1"
+	fits_on_slot = "2"
+	fits_on_slot = "3"
+	fits_on_slot = "4"
+	fits_on_slot = "5"
+	fits_on_slot = "6"
+}
+
+ship_section_template = {
+	key = "REFINERY_STARBASE_SECTION"
+
+	ship_size = starbase_outpost
+	ship_size = starbase_starport
+	ship_size = starbase_starhold
+	ship_size = starbase_starfortress
+	ship_size = starbase_citadel
+	ship_size = starbase_bastion	
+	
+	entity = "orbital_station_refinery_section_entity"
+	icon = "GFX_ship_part_core_mid"
+	fits_on_slot = "1"
+	fits_on_slot = "2"
+	fits_on_slot = "3"
+	fits_on_slot = "4"
+	fits_on_slot = "5"
+	fits_on_slot = "6"
+}
+
+ship_section_template = {
+	key = "ANCHORAGE_STARBASE_SECTION"
+
+	ship_size = starbase_outpost
+	ship_size = starbase_starport
+	ship_size = starbase_starhold
+	ship_size = starbase_starfortress
+	ship_size = starbase_citadel
+	ship_size = starbase_bastion	
+	
+	entity = "orbital_station_science_section_entity"
+	icon = "GFX_ship_part_core_mid"
+	fits_on_slot = "1"
+	fits_on_slot = "2"
+	fits_on_slot = "3"
+	fits_on_slot = "4"
+	fits_on_slot = "5"
+	fits_on_slot = "6"
+}
+
+##################
+# Defensive Platform
+##################
+
+ship_section_template = {
+	key = "ION_CANNON_CORE"
+	fits_on_slot = "ship"
+	ship_size = ion_cannon
+	entity = "ion_cannon_section_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = {
+		name = "TITANIC_GUN_01"
+		slot_size = titanic
+		slot_type = weapon
+		locatorname = "xl_gun_01"
+	}
+
+	small_utility_slots = 0
+	medium_utility_slots = 0
+	large_utility_slots = 6
+	
+	resources = {
+		category = ship_sections
+		cost = {
+			alloys = 0
+		}
+	}
+}

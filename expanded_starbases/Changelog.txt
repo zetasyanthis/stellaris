@@ -1,0 +1,91 @@
+1.2.1
+
+Bug Fixes
+	- Titan slots on bastions being empty
+	- Relaxed restrictions on custom office to include vassals and federation members
+
+1.2
+Compatibility with 2.2:
+- Interstellar Customs Office gives +1 trade collection and protection range, +2 society research and trade value. Requires a commercial pact with neighbor
+- Galactic Trading Company, Offworld Trading Company gives an additional +2 trade value to trading hubs
+
+Additions:
+- Syndicate Customs Office, gives +1 trade collection and protection range, +4 trade value. Requires Criminal Syndicate civic. Can only be built in systems bordering a country that has one of your branch offices on one of their planets
+- Improved Photovoltaics, rare tier 3 tech, solar panels give an additional +2 energy
+
+Tweaks
+- Atmospheric Manipulator appears to have been broken by 2.2, has been temporarily removed
+
+1.1.1
+Additions
+	- Orbital Gene Crops, tier 3 tech that gives +2 food from orbital hydroponics. Requires Gene Crops
+	- Galactic Trading Company, rare tier 4 tech, Offworld Trading Company gives an additional +2 energy to trading hubs
+	- Interstellar Fleet Doctrines, rare tier 4 tech, Naval Logistic Office gives an additional +2 naval capacity to anchorages
+
+Bug Fixes
+	- Neighbors who are rivals or who have a truce with you won't count as a neighbor with open borders for the purposes of building the custom office
+
+1.1.0
+Additions
+	- New T6 Starbase Stellar Bastion, gives 12 module and 8 building slots, 24 platform slots, twice the hp and armor as a citadel, has 1 titan, 2 extra large, 4 large, 25 medium, 2 guided, 2 hanger, 10 point defense, 50 utility, and 3 auxiliary slots. Requires T5 technology of the same name, which requires Titans tech (for titan weapon), if you don't have Apocalypse, requires battleships instead (titan weapon slot will be empty without Apocalypse)
+	- Fallen Empire starbases upgraded to bastions
+	- Interstellar Customs Office, gives +6 energy, +2 society research. Can only be built in systems bordering a country with whom you have open borders. Requires Adaptive Bureaucracy
+	- Stellar Fortifications, gives +25% shields and armor, requires starbase fortification I
+	- Third starbase fortification tech, tier 5, gives +25% starbase hp
+	
+
+Tweaks
+	- Star Fortress gives 4 building slots
+	- Citadel gives 9 module slots and 6 building slots, 18 platform slots
+	- Titans tech requires Citadel tech
+	- Atmospheric Manipulator give +15% habitability (up from +10%)
+
+1.0.3
+	- New XL weapon, intended for Citadels when no other XL weapon is researched. Has accuracy of a mega cannon, but damage of a tier 5 large kinetic weapon.
+
+1.0.2
+	- Hull Points restored to vanilla values
+	- Improved Structural Integrity gives +10% starbase hull points
+	- Two engineering techs that increase starbase hull points by +15/+20%
+
+1.0.1
+Additions:
+- Atmospheric Manipulator, increases planet habitability by 10%, food production by 20%, requires terrestrial sculpting
+- Synchronized Defenses gives +1 starbase capacity
+- Basic starting flak cannons, intended for use in early starbases
+
+Tweaks:
+- Hanger Bay Module gives +1 point defense slot
+- Improved Localization
+
+1.0
+Initial Release
+
+Starbases
+	- Hull points doubled
+	- Starbases get +1 medium gun slots for all levels
+	- Starbases get +2 utility slots for all levels
+	- All starbases except outposts get +1 hanger slot
+	- Starhold and Star Fortress gets +1 guided slot and +1 large slot, Citadel gets +2 of each
+	- Citadel gets +1 extra large gun slot
+	- Starbases get point defense slots, ranging from 1 for outposts to 8 for citadels
+	- Star Fortress and Citadel get +1 auxiliary component slot
+
+Starbase Modules
+	- Trading hubs get +1 energy if built in a system with a trading enclave
+	- Offworld Trading Company gives an additional +3 instead of +2 energy to trading hubs if empire has the corporate dominion civic
+	- The weapon modules give +1 weapon slot each
+	- Trading hubs can be built in systems with a Dathnak (Gasmen) colony
+
+Starbase Buildings
+	- NEW: Pulsar Observatory, +10 engineering, requires level 3 sensor tech
+	- Black Hole Observatory can be built in systems with a natural wormhole
+	- Command Center gives +5 tracking
+	- Communications Jammer gives enemy ships -5 tracking
+	- Defense Grid Supercomputer gives +10 defense platform capacity, up from +8
+	- Disruption Field Generator gives enemy ships -25% shields, up from -20%
+	- Hyperlane Registrar gives +20% sublight speed
+	- Target Uplink Computer gives +5 tracking
+	For Real Space 3.0:
+		- Protostar observatory, built around young stars, +8 physics, requires level 2 sensor tech
+		- Nebula Refinery can be build in any system with a local nebula or proto-planetary disk

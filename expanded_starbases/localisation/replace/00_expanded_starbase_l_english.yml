@@ -1,0 +1,8 @@
+﻿l_english:
+sm_offworld_trading_company_desc_modifier:3 "Produces §G2§! £trade_value£§Y$TRADE_VALUE$§! for each [Root.Owner.GetTradingHubType]\n\nProduces additional §G+2§! £trade_value£§Y$TRADE_VALUE$§! per [Root.Owner.GetTradingHubType] with §Y$tech_galactic_trading_companies$§! tech\n\n"
+sm_naval_logistics_office_desc_modifier:2 "Anchorages: §G+2§! §YNaval Capacity§!\n\nAnchorages: Additional §G+2§! §YNaval Capacity§! with §Y$tech_interstellar_fleet_doctrines$§! tech\n\n"
+
+TECH_UNLOCK_STAR_FORTRESS_CONSTRUCTION_TITLE:0 "§HUnlocks Starbase Upgrade:§! Star Fortress"
+TECH_UNLOCK_STAR_FORTRESS_CONSTRUCTION_DESC:0 "§HStar Fortress§!\nUpgrading the Starhold, Star Fortresses can house four Buildings and a full complement of six Modules."
+TECH_UNLOCK_CITADEL_CONSTRUCTION_TITLE:0 "§HUnlocks Starbase Upgrade:§! Citadel"
+TECH_UNLOCK_CITADEL_CONSTRUCTION_DESC:0 "§HCitadel§!\nUpgrading the Star Fortress, Citadels are one of largest and most heavily fortified type of Starbase and can house six Buildings and a full complement of nine Modules."

@@ -1,0 +1,83 @@
+#	Example:
+#
+#	example_effect = {
+#		add_energy = -100
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+
+create_fe_home_citadel = {
+	create_starbase = {
+		size = "starbase_bastion"
+
+		module = "shipyard"
+		module = "shipyard"
+		module = "shipyard"
+		module = "hangar_bay"
+		module = "hangar_bay"
+		module = "hangar_bay"
+		module = "gun_battery"
+		module = "gun_battery"
+		module = "gun_battery"
+		module = "missile_battery"
+		module = "missile_battery"
+		module = "missile_battery"		
+
+		building = "crew_quarters"
+		building = "command_center"
+		building = "target_uplink_computer"
+		building = "defense_grid"
+		building = "colossus_yards"
+		building = "titan_yards"
+		building = "fleet_academy"
+		building = "resource_silo"
+		
+		effect = {
+			while = {
+				count = 12
+				create_fallen_empire_platform = yes
+			}	
+		}
+	}
+}
+
+create_fe_citadel = {
+	create_starbase = {
+		size = "starbase_bastion"
+
+		module = "shipyard"
+		module = "anchorage"
+		module = "anchorage"
+		module = "anchorage"
+		module = "anchorage"
+		module = "anchorage"
+		module = "hangar_bay"
+		module = "gun_battery"
+		module = "gun_battery"
+		module = "missile_battery"
+		module = "missile_battery"
+		module = "missile_battery"
+
+		building = "crew_quarters"
+		building = "command_center"
+		building = "target_uplink_computer"
+		building = "defense_grid"
+		building = "listening_post"
+		building = "fleet_academy"
+		building = "naval_logistics_office"
+		building = "resource_silo"
+		
+		effect = {
+			while = {
+				count = 4
+				create_fallen_empire_platform = yes
+			}	
+		}			
+	}
+}

@@ -1,0 +1,19 @@
+############################
+#
+# Expanded Game Start Events
+#
+############################
+
+namespace = gamestartsb
+
+# Start-Up Events
+event = {
+	id = gamestartsb.1
+	hide_window = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		set_global_flag = starbase_expanded_installed
+	}
+}

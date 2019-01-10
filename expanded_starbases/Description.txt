@@ -1,0 +1,42 @@
+Full list of changes:
+Starbases
+- New T6 Starbase Stellar Bastion, gives 12 module and 8 building slots, 24 platform slots, twice the hp and armor as a citadel, has access to a titan weapon slot (with Apocalypse only)
+- Star Fortress gives 4 building slots
+- Citadel gives 9 module slots and 6 building slots, 18 platform slots
+- Starbases get +1 medium gun slots for all levels
+- Starbases get +2 utility slots for all levels
+- All starbases except outposts get +1 hanger slot
+- Starhold and Star Fortress gets +1 guided slot and +1 large slot, Citadel and Bastion gets +2 of each
+- Citadel gets +1 extra large gun slot, Bastion gets +2
+- Starbases get point defense slots, ranging from 1 for outposts to 10 for bastions
+- Star Fortress and Citadel get +1 auxiliary component slot
+
+Starbase Modules
+- Trading hubs get +1 trade value if built in a system with a trading enclave
+- The weapon modules give +1 weapon slot each, hanger bay also gives +1 point defense slot
+- Basic starting flak cannons, intended for use in early starbases
+
+Starbase Buildings
+- NEW: Pulsar Observatory, +10 engineering, requires level 3 sensor tech
+- NEW: Interstellar Customs Office, gives +1 trade collection and protection range, +2 society research and trade value. Can only be built in systems bordering a country with whom you have a commercial pact. Requires Adaptive Bureaucracy, not available to gestalts and criminal syndicates
+- New: Syndicate Customs Office, gives +1 trade collection and protection range, +4 trade value. Requires Criminal Syndicate civic. Can only be built in systems bordering a country that has one of your branch offices on one of their planets
+- NEW: Stellar Fortifications, gives +25% shields and armor, requires starbase fortification I
+- Black Hole Observatory can be built in systems with a natural wormhole
+- Command Center gives +5 tracking
+- Communications Jammer gives enemy ships -5 tracking
+- Defense Grid Supercomputer gives +10 defense platform capacity, up from +6
+- Disruption Field Generator gives enemy ships -25% shields, up from -20%
+- Hyperlane Registrar gives +20% sublight speed
+- Target Uplink Computer gives +5 tracking
+For Real Space 3.0:
+- Protostar observatory, built around young stars, +8 physics, requires level 2 sensor tech
+- Nebula Refinery can be build in any system with a local nebula or proto-planetary disk
+
+Technologies
+- Orbital Gene Crops, tier 3 tech, +2 food from orbital hydroponics. Requires Gene Crops
+- Galactic Trading Company, rare tier 4 tech, Offworld Trading Company gives an additional +2 trade value to trading hubs
+- Improved Photovoltaics, rare tier 3 tech, Solar Panel Network gives an additional +2 energy
+- Interstellar Fleet Doctrines, rares tier 4 tech, Naval Logistic Office gives an additional +2 naval capacity to anchorages
+- Improved Structural Integrity gives +10% starbase hull points
+- Three engineering techs that increase starbase hull points by +15/+20/+25%
+- Synchronized Defenses tech gives +1 starbase capacity
