@@ -20,17 +20,7 @@ starbase_outpost = {
 	}
 	max_hitpoints = 5000
 	base_buildtime = 360
-	resources = {
-		category = starbase_stations
-		cost = {
-			alloys = 100
-		}
-
-		upkeep = {
-			energy = 1
-		}
-	}
-	
+	cost = 200
 	combat_size_multiplier = 5
 	size_multiplier = 4
 	fleet_slot_size = 2
@@ -58,6 +48,11 @@ starbase_outpost = {
 	build_block_radius = @build_block_radius_starbase
 	formation_priority = @starbase_formation_priority
 	icon_frame = 1
+
+	upkeep_override = {
+		energy = 1
+		minerals = 0
+	}
 }
 
 starbase_starport = {
@@ -70,10 +65,6 @@ starbase_starport = {
 		starbase_module_capacity_add = 2
 		starbase_building_capacity_add = 1
 		starbase_defense_platform_capacity_add = 6
-		#trade system
-		starbase_trade_collection_range_add = 1
-		starbase_trade_protection_range_add = 1
-		starbase_trade_protection_add = 8
 	}
 	ship_modifier = {
 		ship_fire_rate_mult = 0.50
@@ -81,17 +72,7 @@ starbase_starport = {
 	}
 	max_hitpoints = 10000
 	base_buildtime = 360
-	resources = {
-		category = starbase_stations
-		cost = {
-			alloys = 200
-		}
-
-		upkeep = {
-			energy = 2
-		}
-	}
-	
+	cost = 300
 	combat_size_multiplier = 20
 	size_multiplier = 4
 	fleet_slot_size = 2
@@ -122,6 +103,10 @@ starbase_starport = {
 	formation_priority = @starbase_formation_priority
 	icon_frame = 2
 
+	upkeep_override = {
+		energy = 2
+		minerals = 0
+	}
 }
 
 starbase_starhold = {
@@ -134,10 +119,6 @@ starbase_starhold = {
 		starbase_module_capacity_add = 4
 		starbase_building_capacity_add = 2
 		starbase_defense_platform_capacity_add = 9
-		#trade system
-		starbase_trade_collection_range_add = 1
-		starbase_trade_protection_range_add = 1
-		starbase_trade_protection_add = 16
 	}
 	ship_modifier = {
 		ship_fire_rate_mult = 0.50
@@ -145,17 +126,7 @@ starbase_starhold = {
 	}
 	max_hitpoints = 20000
 	base_buildtime = 720
-	resources = {
-		category = starbase_stations
-		cost = {
-			alloys = 500
-		}
-
-		upkeep = {
-			energy = 3
-		}
-	}
-	
+	cost = 750
 	combat_size_multiplier = 30
 	size_multiplier = 4
 	fleet_slot_size = 2
@@ -188,6 +159,10 @@ starbase_starhold = {
 	formation_priority = @starbase_formation_priority
 	icon_frame = 3
 
+	upkeep_override = {
+		energy = 3
+		minerals = 0
+	}
 }
 
 starbase_starfortress = {
@@ -198,12 +173,8 @@ starbase_starfortress = {
 		ship_evasion_mult = -1
 		ship_armor_add = 10000
 		starbase_module_capacity_add = 6
-		starbase_building_capacity_add = 4
+		starbase_building_capacity_add = 3
 		starbase_defense_platform_capacity_add = 12
-		#trade system
-		starbase_trade_collection_range_add = 1
-		starbase_trade_protection_range_add = 1
-		starbase_trade_protection_add = 24
 	}
 	ship_modifier = {
 		ship_fire_rate_mult = 0.50
@@ -211,17 +182,7 @@ starbase_starfortress = {
 	}
 	max_hitpoints = 40000
 	base_buildtime = 1080
-	resources = {
-		category = starbase_stations
-		cost = {
-			alloys = 1250
-		}
-
-		upkeep = {
-			energy = 4
-		}
-	}
-	
+	cost = 2500
 	combat_size_multiplier = 40
 	size_multiplier = 4
 	fleet_slot_size = 2
@@ -256,6 +217,10 @@ starbase_starfortress = {
 	formation_priority = @starbase_formation_priority
 	icon_frame = 4
 
+	upkeep_override = {
+		energy = 4
+		minerals = 0
+	}
 }
 
 starbase_citadel = {
@@ -265,13 +230,9 @@ starbase_citadel = {
 	modifier = {
 		ship_evasion_mult = -1
 		ship_armor_add = 20000
-		starbase_module_capacity_add = 9
-		starbase_building_capacity_add = 6
-		starbase_defense_platform_capacity_add = 18
-		#trade system
-		starbase_trade_collection_range_add = 1
-		starbase_trade_protection_range_add = 1
-		starbase_trade_protection_add = 32
+		starbase_module_capacity_add = 6
+		starbase_building_capacity_add = 4
+		starbase_defense_platform_capacity_add = 15
 	}
 	ship_modifier = {
 		ship_fire_rate_mult = 0.50
@@ -279,17 +240,7 @@ starbase_citadel = {
 	}	
 	max_hitpoints = 80000
 	base_buildtime = 1440
-	resources = {
-		category = starbase_stations
-		cost = {
-			alloys = 3500
-		}
-
-		upkeep = {
-			energy = 5
-		}
-	}
-	
+	cost = 7500
 	combat_size_multiplier = 50
 	size_multiplier = 4
 	fleet_slot_size = 2
@@ -324,75 +275,10 @@ starbase_citadel = {
 	formation_priority = @starbase_formation_priority
 	icon_frame = 5
 
-}
-
-starbase_bastion = {
-	entity = "starbase_citadel_entity"
-	max_speed = 0.0
-	acceleration = 0.0
-	rotation_speed = 0.0
-	modifier = {
-		ship_evasion_mult = -1
-		ship_armor_add = 40000
-		starbase_module_capacity_add = 12
-		starbase_building_capacity_add = 8
-		starbase_defense_platform_capacity_add = 24
-		#trade system
-		starbase_trade_collection_range_add = 1
-		starbase_trade_protection_range_add = 1
-		starbase_trade_protection_add = 40
+	upkeep_override = {
+		energy = 5
+		minerals = 0
 	}
-	ship_modifier = {
-		ship_fire_rate_mult = 0.50
-		ship_weapon_range_mult = 0.20
-	}	
-	max_hitpoints = 160000
-	base_buildtime = 1800
-	resources = {
-		category = starbase_stations
-		cost = {
-			alloys = 7000
-		}
-
-		upkeep = {
-			energy = 5
-		}
-	}
-	
-	combat_size_multiplier = 50
-	size_multiplier = 4
-	fleet_slot_size = 2
-	section_slots = {
-		"core" = { locator = "part1" }
-		"1" = { locator = "part2" }
-		"2" = { locator = "part3" }
-		"3" = { locator = "part4" }
-		"4" = { locator = "part5" }
-		"5" = { locator = "part6" }
-		"6" = { locator = "part7" }
-	}
-	is_designable = no
-	num_target_locators = 0
-	is_space_station = no
-	can_have_federation_design = no
-	is_civilian = no
-	components_add_to_cost = no
-	can_disable = yes
-	flip_control_on_disable = yes
-
-	enable_default_design = yes	#if yes, countries will have an auto-generated design at start
-	prerequisites = { "tech_starbase_6" }
-	class = shipclass_starbase
-
-	required_component_set = "power_core"
-	required_component_set = "sensor_components"
-	required_component_set = "combat_computers"
-	required_component_set = "ftl_inhibitor"
-
-	build_block_radius = @build_block_radius_starbase
-	formation_priority = @starbase_formation_priority
-	icon_frame = 5
-
 }
 
 ####################
@@ -413,6 +299,7 @@ starbase_swarm = {
 	}
 	max_hitpoints = 30000
 	base_buildtime = 730
+	cost = 0
 	combat_size_multiplier = 50
 	size_multiplier = 4
 	fleet_slot_size = 2
@@ -451,6 +338,7 @@ starbase_ai = {
 	}	
 	max_hitpoints = 20000
 	base_buildtime = 730
+	cost = 0
 	combat_size_multiplier = 50
 	size_multiplier = 4
 	fleet_slot_size = 2
@@ -489,6 +377,7 @@ starbase_exd = {
 	}
 	max_hitpoints = 20000
 	base_buildtime = 730
+	cost = 0
 	combat_size_multiplier = 50
 	size_multiplier = 4
 	fleet_slot_size = 2
@@ -528,6 +417,7 @@ starbase_marauder = {
 	}
 	max_hitpoints = 20000
 	base_buildtime = 730
+	cost = 0
 	combat_size_multiplier = 50
 	size_multiplier = 4
 	fleet_slot_size = 2
@@ -567,6 +457,7 @@ starbase_gatebuilders = {
 	}
 	max_hitpoints = 20000
 	base_buildtime = 730
+	cost = 0
 	combat_size_multiplier = 50
 	size_multiplier = 4
 	fleet_slot_size = 2
@@ -600,16 +491,16 @@ ion_cannon = {
 	max_speed = 6
 	rotation_speed = 10
 	acceleration = 10
-	max_hitpoints = 20000
+	max_hitpoints = 10000
 	modifier = {
 		ship_evasion_mult = -1
 	}
 	ship_modifier = {
 		ship_weapon_range_mult = 0.20
 	}
-	size_multiplier = 6
-	fleet_slot_size = 6
-	combat_size_multiplier = 6
+	size_multiplier = 8
+	fleet_slot_size = 8
+	combat_size_multiplier = 8
 	section_slots = { "ship" = { locator = "part1" } }
 	is_designable = yes
 	components_add_to_cost = no
@@ -632,11 +523,6 @@ ion_cannon = {
 	possible_starbase = {
 		has_starbase_size >= starbase_citadel
 	}
-
-	resources = {
-		category = starbase_stations
-		cost = {
-			alloys = 2000
-		}
-	}
+	
+	cost = 2000
 }

@@ -42,15 +42,8 @@ starbase_level_starfortress = {
 
 starbase_level_citadel = {
 	ship_size = starbase_citadel
-	next_level = starbase_level_bastion
 	level_weight = 4
 	ai_weight = { weight = 5 }
-}
-
-starbase_level_bastion = {
-	ship_size = starbase_bastion
-	level_weight = 5
-	ai_weight = { weight = 6 }
 }
 
 # Special
@@ -75,6 +68,13 @@ starbase_level_exd = {
 
 starbase_level_marauder = {
 	ship_size = starbase_marauder
+	display_empire_shield = yes
+	level_weight = 5
+	ai_weight = { weight = 5 }
+}
+
+starbase_level_gatebuilders = {
+	ship_size = starbase_gatebuilders
 	display_empire_shield = yes
 	level_weight = 5
 	ai_weight = { weight = 5 }
