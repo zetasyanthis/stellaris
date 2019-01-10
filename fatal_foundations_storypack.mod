@@ -1,5 +1,5 @@
 name="Fatal Foundations Story Pack"
-archive="mod/fatal_foundations_storypack"
+path="mod/fatal_foundations_storypack"
 tags={
 	"Events"
 	"Gameplay"

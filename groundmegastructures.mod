@@ -1,5 +1,5 @@
 name="Ground Megastructures"
-archive="mods/groundmegastructures"
+path="mods/groundmegastructures"
 tags={
 	"Buildings"
 	"Technologies"
