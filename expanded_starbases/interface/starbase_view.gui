@@ -309,15 +309,6 @@ guiTypes = {
 					add_horizontal = yes
 					max_slots_horizontal = 6#4wtf
 				}
-				buttonType = {
-					name = "trade_routes"
-					quadTextureSprite = "GFX_standard_button_180_34_button"
-					position = { x = 33 y = -51  }
-					Orientation = "LOWER_LEFT"
-					buttonFont = "cg_16b"
-					text = "TRADE_ROUTES"
-					font = "cg_16b"
-				}
 			}
 
 			containerWindowType = {
