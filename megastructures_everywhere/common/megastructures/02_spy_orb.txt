@@ -258,6 +258,7 @@ spy_orb_restored = {
 		minerals = 30000
 	}
 	construction_blocks_others = no
+	construction_blocks_others = no
 	maintenance = {
 		energy = 100
 	}

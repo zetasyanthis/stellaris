@@ -111,6 +111,7 @@ dyson_sphere_1 = {
 	build_cost = {
 		minerals = 50000
 	}
+        construction_blocks_others = no
 
 	possible = {
 		from = { has_ascension_perk = ap_galactic_wonders }
