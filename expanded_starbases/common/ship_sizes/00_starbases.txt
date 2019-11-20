@@ -116,7 +116,7 @@ starbase_starhold = {
 	modifier = {
 		ship_evasion_mult = -1
 		ship_armor_add = 10000
-		starbase_module_capacity_add = 8
+		starbase_module_capacity_add = 12
 		starbase_building_capacity_add = 4
 		starbase_defense_platform_capacity_add = 18
 	}
@@ -172,7 +172,7 @@ starbase_starfortress = {
 	modifier = {
 		ship_evasion_mult = -1
 		ship_armor_add = 20000
-		starbase_module_capacity_add = 12
+		starbase_module_capacity_add = 16
 		starbase_building_capacity_add = 6
 		starbase_defense_platform_capacity_add = 24
 	}
@@ -230,8 +230,8 @@ starbase_citadel = {
 	modifier = {
 		ship_evasion_mult = -1
 		ship_armor_add = 60000
-		starbase_module_capacity_add = 24
-		starbase_building_capacity_add = 6
+		starbase_module_capacity_add = 30
+		starbase_building_capacity_add = 10
 		starbase_defense_platform_capacity_add = 40
 	}
 	ship_modifier = {
